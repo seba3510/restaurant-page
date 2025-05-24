@@ -1,2 +1,3 @@
-import "../styles/navbar.css"
+import "../styles/navbar.css";
+
 console.log("Hello, World!");
