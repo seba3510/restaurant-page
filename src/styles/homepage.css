@@ -30,11 +30,13 @@ body {
 #content {
 	display: flex;
 	flex-direction: column;
-	margin-top: 1em;
+	/* margin-top: 1em; */
 	background-color: rgb(238, 205, 144);
 	margin-left: 1em;
 	margin-right: 1em;
 	border-radius: 50px;
+	margin-top: 5em;
+	/* padding: 2em; */
 }
 
 /***********************************************************************************/
@@ -64,7 +66,7 @@ body {
 	margin-right: 1em;
 	margin-bottom: 2em;
 	margin-top: 1em;
-	padding: 1.2em;
+	/* padding: 1.2em; */
 }
 
 /***********************************************************************************/
@@ -79,15 +81,10 @@ body {
 #hours {
 	border: var(--card-border);
 	background-color: var(--card-background-color);
-	/* width: fit-content; */
-	text-align: center;
-	align-items: center;
 	margin-left: 2em;
 	margin-right: 1em;
 	margin-bottom: 2em;
-	margin-top: 1em;
-	padding-right: 1em;
-	padding-left: 1em;
+	font-size: 1.5rem;
 }
 
 /***********************************************************************************/
@@ -98,6 +95,24 @@ body {
 	margin-bottom: 2em;
 	margin-top: 1em;
 	list-style: none;
+	font-size: 1.3rem;
+}
+
+/***********************************************************************************/
+
+#location {
+	border: var(--card-border);
+	background-color: var(--card-background-color);
+	margin: 2em;
+	padding: 1em;
+	font-size: 1.5rem;
+}
+
+/***********************************************************************************/
+
+#location > p {
+	margin-left: 1.2em;
+	font-size: 1.3rem;
 }
 
 /***********************************************************************************/
