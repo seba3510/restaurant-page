@@ -26,15 +26,17 @@ class Homepage {
 
         this.#content.innerHTML = "";
 
-        this.#appendHeader();
+        this.#displayHeader();
 
-        this.#appendDescription();
+        this.#displayDescription();
+
+        this.#displayBusinessHours();
 
     } // display()
 
     //=====================================================================================================================================
 
-    #appendHeader() {
+    #displayHeader() {
 
         const header =
             document.createElement
@@ -135,11 +137,11 @@ class Homepage {
         this.#content.appendChild
             (header);
 
-    } // appendHeader()
+    } // displayHeader()
 
     //=====================================================================================================================================
 
-    #appendDescription() {
+    #displayDescription() {
 
         const container =
             document.createElement
@@ -181,7 +183,77 @@ class Homepage {
         this.#content.appendChild
             (container);
 
-    } // appendDescription()
+    } // displayDescription()
+
+    //=====================================================================================================================================
+
+    #displayBusinessHours() {
+
+        const container =
+            document.createElement
+                ("section");
+
+        container.setAttribute
+            (
+                "id",
+                "hours"
+            );
+
+        const hours =
+            [
+                "Sunday: 8am - 8pm",
+                "Monday: 6am - 6pm",
+                "Tuesday: 6am - 6pm",
+                "Wednesday: 6am - 6pm",
+                "Thursday: 6am - 10pm",
+                "Friday: 6am - 10pm",
+                "Saturday: 8am - 6pm"
+            ];
+
+        const h2 =
+            document.createElement
+                ("h2");
+
+        h2.textContent =
+            "Business Hours";
+
+        container.appendChild(h2);
+
+        this.#createUnorderedList
+            (
+                hours,
+                container
+            );
+
+        this.#content.appendChild
+            (container);
+
+    } // displayBusinessHours()
+
+    //=====================================================================================================================================
+
+    #createUnorderedList(hours, container) {
+
+        const ul =
+            document.createElement("ul");
+
+        const n = 7;
+
+        for (let i = 0; i < n; i++) {
+
+            const li =
+                document.createElement("li");
+
+            li.textContent =
+                hours[i];
+
+            ul.appendChild(li);
+
+        } // for
+
+        container.appendChild(ul);
+
+    } // createUnorderedList()
 
     //=====================================================================================================================================
 
