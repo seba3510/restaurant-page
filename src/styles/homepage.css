@@ -1,0 +1,30 @@
+:root {
+	--photo-width: 10%;
+	--photo-height: 30%;
+}
+/***********************************************************************************/
+
+#content {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: 1fr;
+}
+
+/***********************************************************************************/
+
+#left-bee,
+#right-bee {
+	width: var(--photo-width);
+	height: var(--photo-height);
+}
+
+/***********************************************************************************/
+
+#content > header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/***********************************************************************************/
