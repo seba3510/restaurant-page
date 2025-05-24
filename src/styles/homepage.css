@@ -1,13 +1,15 @@
 :root {
-	--photo-width: 10%;
-	--photo-height: 30%;
+	--photo-width: 20%;
+	--photo-height: 50%;
 }
 /***********************************************************************************/
 
 #content {
 	display: grid;
 	grid-template-rows: repeat(4, 1fr);
-	grid-template-columns: 1fr;
+	grid-template-columns: 0.55fr;
+	justify-content: center;
+	align-items: center;
 }
 
 /***********************************************************************************/
@@ -23,8 +25,14 @@
 #content > header {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	border: 10px rgb(178, 106, 18);
+	border-radius: 5%;
+	border-style: inset;
+	margin-top: 2em;
+	background-color: yellow;
+	color: black;
 }
 
 /***********************************************************************************/
