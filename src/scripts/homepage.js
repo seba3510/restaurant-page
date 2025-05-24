@@ -13,13 +13,14 @@ class Homepage {
         document.querySelector
             ("#content");
 
-    //========================================================================
+    //=====================================================================================================================================
 
     constructor() {
 
     } // constructor()
 
-    //========================================================================
+    //=====================================================================================================================================
+
 
     display() {
 
@@ -27,9 +28,11 @@ class Homepage {
 
         this.#appendHeader();
 
+        this.#appendDescription();
+
     } // display()
 
-    //========================================================================
+    //=====================================================================================================================================
 
     #appendHeader() {
 
@@ -134,9 +137,57 @@ class Homepage {
 
     } // appendHeader()
 
+    //=====================================================================================================================================
+
+    #appendDescription() {
+
+        const container =
+            document.createElement
+                ("section");
+
+        container.setAttribute
+            (
+                "id",
+                "short-description"
+            );
+
+        const para1 =
+            document.createElement
+                ("p");
+
+        const text =
+            "Beary's has the best porridge! " +
+            "The atmosphere and customer service make you " +
+            "feel like you are sitting in the middle of the " +
+            "woods, eating like a bear! This is exactly the kind " +
+            "of place that I like to return again and again.";
+
+        para1.textContent =
+            text;
+
+        container.appendChild
+            (para1);
+
+        const para2 =
+            document.createElement
+                ("p");
+
+        para2.textContent =
+            "Goldilocks";
+
+        container.appendChild
+            (para2);
+
+        this.#content.appendChild
+            (container);
+
+    } // appendDescription()
+
+    //=====================================================================================================================================
+
 } // class
 
-//========================================================================
+//=====================================================================================================================================
 
 
 const homePage =
@@ -144,4 +195,6 @@ const homePage =
 
 export { homePage };
 
-//========================================================================
+
+//=====================================================================================================================================
+
