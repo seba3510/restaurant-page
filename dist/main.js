@@ -16,7 +16,7 @@
   \***********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root {\r\n\t--photo-width: 20%;\r\n\t--photo-height: 50%;\r\n}\r\n/***********************************************************************************/\r\n\r\n#content {\r\n\tdisplay: grid;\r\n\tgrid-template-rows: repeat(4, 1fr);\r\n\tgrid-template-columns: 0.55fr;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#left-bee,\r\n#right-bee {\r\n\twidth: var(--photo-width);\r\n\theight: var(--photo-height);\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#content > header {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\tborder: 10px rgb(178, 106, 18);\r\n\tborder-radius: 5%;\r\n\tborder-style: inset;\r\n\tmargin-top: 2em;\r\n\tbackground-color: yellow;\r\n\tcolor: black;\r\n}\r\n\r\n/***********************************************************************************/\r\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/styles/homepage.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/honeycomb.png */ \"./src/assets/images/honeycomb.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root {\r\n\t--card-border: 15px solid rgb(231, 138, 17);\r\n\t--card-background-color: yellow;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\nbody {\r\n\tbackground-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n.outer-container {\r\n\tborder: var(--card-border);\r\n\tmargin-left: 2em;\r\n\tmargin-right: 2em;\r\n\tmargin-top: 1em;\r\n\tborder-radius: 20px;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n.inner-container {\r\n\tbackground-color: var(--card-background-color);\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#content {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\t/* margin-top: 1em; */\r\n\tbackground-color: rgb(238, 205, 144);\r\n\tmargin-left: 1em;\r\n\tmargin-right: 1em;\r\n\tborder-radius: 50px;\r\n\tmargin-top: 5em;\r\n\t/* padding: 2em; */\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#content > header > section .inner-container {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tjustify-content: space-evenly;\r\n\talign-items: center;\r\n\tfont-size: 2rem;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#left-bee,\r\n#right-bee {\r\n\twidth: 10%;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#short-description {\r\n\tborder: var(--card-border);\r\n\tbackground-color: var(--card-background-color);\r\n\tfont-size: 1.5rem;\r\n\tmargin-left: 1em;\r\n\tmargin-right: 1em;\r\n\tmargin-bottom: 2em;\r\n\tmargin-top: 1em;\r\n\t/* padding: 1.2em; */\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#short-description > p:nth-child(even) {\r\n\tmargin-top: 1em;\r\n\tfont-weight: bold;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#hours {\r\n\tborder: var(--card-border);\r\n\tbackground-color: var(--card-background-color);\r\n\tmargin-left: 2em;\r\n\tmargin-right: 1em;\r\n\tmargin-bottom: 2em;\r\n\tfont-size: 1.5rem;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#hours > ul {\r\n\tmargin-left: 2em;\r\n\tmargin-right: 1em;\r\n\tmargin-bottom: 2em;\r\n\tmargin-top: 1em;\r\n\tlist-style: none;\r\n\tfont-size: 1.3rem;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#location {\r\n\tborder: var(--card-border);\r\n\tbackground-color: var(--card-background-color);\r\n\tmargin: 2em;\r\n\tpadding: 1em;\r\n\tfont-size: 1.5rem;\r\n}\r\n\r\n/***********************************************************************************/\r\n\r\n#location > p {\r\n\tmargin-left: 1.2em;\r\n\tfont-size: 1.3rem;\r\n}\r\n\r\n/***********************************************************************************/\r\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/styles/homepage.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = [];\n\n  // return the list of modules as css string\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n      content += cssWithMappingToString(item);\n      if (needLayer) {\n        content += \"}\";\n      }\n      if (item[2]) {\n        content += \"}\";\n      }\n      if (item[4]) {\n        content += \"}\";\n      }\n      return content;\n    }).join(\"\");\n  };\n\n  // import a list of modules into the list\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n    var alreadyImportedModules = {};\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n      list.push(item);\n    }\n  };\n  return list;\n};\n\n//# sourceURL=webpack://restaurant-page/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n  if (!url) {\n    return url;\n  }\n  url = String(url.__esModule ? url.default : url);\n\n  // If url is already wrapped in quotes, remove them\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n  if (options.hash) {\n    url += options.hash;\n  }\n\n  // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n  return url;\n};\n\n//# sourceURL=webpack://restaurant-page/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -110,13 +120,53 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/assets/images/honeycomb.png":
+/*!*****************************************!*\
+  !*** ./src/assets/images/honeycomb.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"348f0cae5e5fd07340a5.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/images/honeycomb.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/left-bee.png":
+/*!****************************************!*\
+  !*** ./src/assets/images/left-bee.png ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a4b1a9a718b813ff367f.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/images/left-bee.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/right-bee.png":
+/*!*****************************************!*\
+  !*** ./src/assets/images/right-bee.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c211eb647b52d1a43e7c.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/images/right-bee.png?");
+
+/***/ }),
+
+/***/ "./src/scripts/homepage.js":
+/*!*********************************!*\
+  !*** ./src/scripts/homepage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   homePage: () => (/* binding */ homePage)\n/* harmony export */ });\n/* harmony import */ var _assets_images_left_bee_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/left-bee.png */ \"./src/assets/images/left-bee.png\");\n/* harmony import */ var _assets_images_right_bee_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/right-bee.png */ \"./src/assets/images/right-bee.png\");\n\r\n\r\nclass Homepage {\r\n\r\n    constructor() {\r\n\r\n    } // constructor\r\n\r\n    //========================================================================\r\n\r\n    display() {\r\n\r\n        this.#appendHeader();\r\n\r\n    } // display()\r\n\r\n    //========================================================================\r\n\r\n\r\n    #appendHeader() {\r\n\r\n        const contentContainer =\r\n            document.querySelector\r\n                (\"#content\");\r\n\r\n        contentContainer.innerHTML = \"\";\r\n\r\n        const headerContainer =\r\n            document.createElement\r\n                (\"header\");\r\n\r\n        const body =\r\n            document.querySelector\r\n                (\"body\");\r\n\r\n        const outerContainer =\r\n            document.createElement\r\n                (\"section\");\r\n\r\n        outerContainer.setAttribute\r\n            (\r\n                \"class\",\r\n                \"outer-container\"\r\n            );\r\n\r\n        headerContainer.appendChild\r\n            (outerContainer);\r\n\r\n        const innerContainer =\r\n            document.createElement\r\n                (\"section\");\r\n\r\n        innerContainer.setAttribute\r\n            (\r\n                \"class\",\r\n                \"inner-container\"\r\n            );\r\n\r\n        headerContainer.appendChild\r\n            (innerContainer);\r\n\r\n        const img1 =\r\n            document.createElement\r\n                (\"img\");\r\n\r\n        const paths =\r\n            [\r\n                \"../assets/images/left-bee.png\",\r\n                \"../assets/images/right-bee.png\"\r\n            ];\r\n\r\n        img1.setAttribute\r\n            (\r\n                \"src\",\r\n                _assets_images_left_bee_png__WEBPACK_IMPORTED_MODULE_0__\r\n            );\r\n\r\n        img1.setAttribute\r\n            (\r\n                \"alt\",\r\n                \"This is a bee.\"\r\n            );\r\n\r\n        img1.setAttribute\r\n            (\r\n                \"id\",\r\n                \"left-bee\"\r\n            );\r\n\r\n        innerContainer.appendChild\r\n            (img1);\r\n\r\n        const h1 =\r\n            document.createElement\r\n                (\"h1\");\r\n\r\n        h1.textContent =\r\n            \"Beary's Breakfast Bar\";\r\n\r\n        innerContainer.appendChild\r\n            (h1);\r\n\r\n        const img2 =\r\n            document.createElement\r\n                (\"img\");\r\n\r\n        img2.setAttribute\r\n            (\r\n                \"src\",\r\n                _assets_images_right_bee_png__WEBPACK_IMPORTED_MODULE_1__\r\n            );\r\n\r\n        img2.setAttribute\r\n            (\r\n                \"alt\",\r\n                \"This is another bee.\"\r\n            );\r\n\r\n        img2.setAttribute\r\n            (\r\n                \"id\",\r\n                \"right-bee\"\r\n            );\r\n\r\n        innerContainer.appendChild\r\n            (img2);\r\n\r\n        outerContainer.appendChild\r\n            (innerContainer);\r\n\r\n        headerContainer.appendChild\r\n            (outerContainer);\r\n\r\n        contentContainer.appendChild\r\n            (headerContainer);\r\n\r\n    } // appendHeader()\r\n\r\n} // class\r\n\r\n//========================================================================\r\n\r\n\r\nconst homePage =\r\n    new Homepage();\r\n\r\n\r\n\r\n//========================================================================\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/scripts/homepage.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/restaurant.js":
 /*!***********************************!*\
   !*** ./src/scripts/restaurant.js ***!
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/navbar.css */ \"./src/styles/navbar.css\");\n/* harmony import */ var _styles_homepage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/homepage.css */ \"./src/styles/homepage.css\");\n\r\n\r\n\r\nconsole.log(\"Hello, World!\");\n\n//# sourceURL=webpack://restaurant-page/./src/scripts/restaurant.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/navbar.css */ \"./src/styles/navbar.css\");\n/* harmony import */ var _styles_homepage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/homepage.css */ \"./src/styles/homepage.css\");\n/* harmony import */ var _homepage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./homepage.js */ \"./src/scripts/homepage.js\");\n\r\n\r\n\r\n\r\nconsole.log(\"Hello, World!\");\r\n\r\n_homepage_js__WEBPACK_IMPORTED_MODULE_2__.homePage.display();\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/scripts/restaurant.js?");
 
 /***/ }),
 
@@ -166,6 +216,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -191,6 +244,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +270,55 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
