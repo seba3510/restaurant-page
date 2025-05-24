@@ -2,21 +2,102 @@
 	--card-border: 15px solid rgb(231, 138, 17);
 	--card-background-color: yellow;
 }
-#content {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1em;
+
+/***********************************************************************************/
+
+body {
+	background-image: url("../assets/images/honeycomb.png");
 }
 
 /***********************************************************************************/
 
-#content > header {
+.outer-container {
+	border: var(--card-border);
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 1em;
+	border-radius: 20px;
+}
+
+/***********************************************************************************/
+
+.inner-container {
+	background-color: var(--card-background-color);
+}
+
+/***********************************************************************************/
+
+#content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
+	background-color: rgb(238, 205, 144);
+	margin-left: 1em;
+	margin-right: 1em;
+	border-radius: 50px;
+}
+
+/***********************************************************************************/
+
+#content > header > section .inner-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: var(--card-background-color);
+	font-size: 2rem;
+}
+
+/***********************************************************************************/
+
+#left-bee,
+#right-bee {
+	width: 10%;
+}
+
+/***********************************************************************************/
+
+#short-description {
 	border: var(--card-border);
+	background-color: var(--card-background-color);
+	font-size: 1.5rem;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	margin-top: 1em;
+	padding: 1.2em;
+}
+
+/***********************************************************************************/
+
+#short-description > p:nth-child(even) {
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+/***********************************************************************************/
+
+#hours {
+	border: var(--card-border);
+	background-color: var(--card-background-color);
+	/* width: fit-content; */
+	text-align: center;
+	align-items: center;
+	margin-left: 2em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	margin-top: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+/***********************************************************************************/
+
+#hours > ul {
+	margin-left: 2em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	margin-top: 1em;
+	list-style: none;
 }
 
 /***********************************************************************************/
