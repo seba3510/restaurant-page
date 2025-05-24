@@ -1,7 +1,10 @@
 :root {
 	--photo-width: 20%;
 	--photo-height: 50%;
+	--card-border: 10px rgb(178, 106, 18);
+	--card-border-radius: 5%;
 }
+
 /***********************************************************************************/
 
 #content {
@@ -15,7 +18,8 @@
 /***********************************************************************************/
 
 #left-bee,
-#right-bee {
+#right-bee,
+#beehive {
 	width: var(--photo-width);
 	height: var(--photo-height);
 }
@@ -28,11 +32,38 @@
 	justify-content: center;
 	align-items: center;
 	border: 10px rgb(178, 106, 18);
-	border-radius: 5%;
+	border-radius: var(--card-border-radius);
 	border-style: inset;
 	margin-top: 2em;
 	background-color: yellow;
 	color: black;
+}
+
+/***********************************************************************************/
+
+#short-description {
+	/* margin-top: 2em; */
+	margin-bottom: 3em;
+	padding: 0.9em;
+	border: 5px orange;
+	border-style: inset;
+	border-radius: var(--card-border-radius);
+	font-size: 1.5rem;
+}
+
+/***********************************************************************************/
+#short-description > p:nth-child(even) {
+	margin-top: 1em;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/***********************************************************************************/
+
+#beehive-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 /***********************************************************************************/
