@@ -8,7 +8,6 @@ import image2 from "../assets/images/right-bee.png";
 
 class Homepage {
 
-
     #content =
         document.querySelector
             ("#content");
@@ -21,7 +20,6 @@ class Homepage {
 
     //=====================================================================================================================================
 
-
     display() {
 
         this.#content.innerHTML = "";
@@ -31,6 +29,8 @@ class Homepage {
         this.#displayDescription();
 
         this.#displayBusinessHours();
+
+        this.#displayLocation();
 
     } // display()
 
@@ -256,6 +256,48 @@ class Homepage {
     } // createUnorderedList()
 
     //=====================================================================================================================================
+
+    #displayLocation() {
+
+        const container =
+            document.createElement
+                ("section");
+
+        container.setAttribute
+            (
+                "id",
+                "location"
+            );
+
+        const h2 =
+            document.createElement
+                ("h2");
+
+        h2.textContent =
+            "Location";
+
+        container.appendChild(h2);
+
+        const para =
+            document.createElement
+                ("p");
+
+        const location =
+            "123 Forest Drive, Forestville, Maine";
+
+        para.textContent =
+            location;
+
+        container.appendChild
+            (para);
+
+        this.#content.appendChild
+            (container);
+
+    } // displayLocation()
+
+    //=====================================================================================================================================
+
 
 } // class
 
