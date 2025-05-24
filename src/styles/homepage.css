@@ -1,27 +1,11 @@
 :root {
-	--photo-width: 20%;
-	--photo-height: 50%;
-	--card-border: 10px rgb(178, 106, 18);
-	--card-border-radius: 5%;
+	--card-border: 15px solid rgb(231, 138, 17);
+	--card-background-color: yellow;
 }
-
-/***********************************************************************************/
-
 #content {
-	display: grid;
-	grid-template-rows: repeat(4, 1fr);
-	grid-template-columns: 0.55fr;
-	justify-content: center;
-	align-items: center;
-}
-
-/***********************************************************************************/
-
-#left-bee,
-#right-bee,
-#beehive {
-	width: var(--photo-width);
-	height: var(--photo-height);
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
 }
 
 /***********************************************************************************/
@@ -29,41 +13,10 @@
 #content > header {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
-	border: 10px rgb(178, 106, 18);
-	border-radius: var(--card-border-radius);
-	border-style: inset;
-	margin-top: 2em;
-	background-color: yellow;
-	color: black;
-}
-
-/***********************************************************************************/
-
-#short-description {
-	/* margin-top: 2em; */
-	margin-bottom: 3em;
-	padding: 0.9em;
-	border: 5px orange;
-	border-style: inset;
-	border-radius: var(--card-border-radius);
-	font-size: 1.5rem;
-}
-
-/***********************************************************************************/
-#short-description > p:nth-child(even) {
-	margin-top: 1em;
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-
-/***********************************************************************************/
-
-#beehive-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	background-color: var(--card-background-color);
+	border: var(--card-border);
 }
 
 /***********************************************************************************/
