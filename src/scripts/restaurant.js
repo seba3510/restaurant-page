@@ -13,6 +13,7 @@ import { homePage } from "./homepage.js";
 class Restaurant {
 
 	#homeBtn;
+
 	//===============================================================================
 
 	#menuBtn =
