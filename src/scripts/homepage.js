@@ -6,15 +6,17 @@ import image2 from "../assets/images/right-bee.png";
 
 //===============================================================================
 
-class Homepage {
+class HomePage {
 
-    #content =
-        document.querySelector
-            ("#content");
+    #content;
 
     //=====================================================================================================================================
 
     constructor() {
+
+        this.#content =
+            document.querySelector
+                ("#content");
 
     } // constructor()
 
@@ -305,7 +307,7 @@ class Homepage {
 
 
 const homePage =
-    new Homepage();
+    new HomePage();
 
 export { homePage };
 
