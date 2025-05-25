@@ -2,11 +2,11 @@ import "../styles/navbar.css";
 
 //===============================================================================
 
-import "../styles/homepage.css";
+import { homePage } from "./homepage.js";
 
 //===============================================================================
 
-import { homePage } from "./homepage.js";
+import { menu } from "./menu.js";
 
 //===============================================================================
 
@@ -74,6 +74,19 @@ class Restaurant {
 
 	//===============================================================================
 
+	displayMenu() {
+
+		this.#menuBtn.addEventListener("click", () => {
+
+			menu.display();
+
+		}); // addEventListener
+
+	} // displayMenu()
+
+	//===============================================================================
+
+
 } // class
 
 //===============================================================================
@@ -83,3 +96,5 @@ const restaurant =
 
 
 restaurant.displayHomePage();
+
+restaurant.displayMenu();
