@@ -1,0 +1,41 @@
+#content {
+	display: flex;
+	flex-direction: column;
+}
+
+/*************************************************************/
+
+.outer-container {
+	border: 15px solid rgb(231, 138, 17);
+}
+
+/*************************************************************/
+
+.inner-container {
+	background-color: yellow;
+}
+
+/*************************************************************/
+
+.inner-container > header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 2rem;
+}
+
+/*************************************************************/
+
+.outer-container {
+	margin-top: 1em;
+}
+
+/*************************************************************/
+
+#left-bee,
+#right-bee {
+	width: 15%;
+}
+
+/*************************************************************/
