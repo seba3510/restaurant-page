@@ -31,40 +31,23 @@ class Menu {
 
 		this.#displayHeader();
 
+		// this.#displayBeverages();
+
 	} // display()
 
 	//=======================================================================================
 
 	#displayHeader() {
+
 		const header =
 			document.createElement
 				("header");
 
-		const outerContainer =
-			document.createElement
-				("section");
-
-		outerContainer.setAttribute
+		header.setAttribute
 			(
-				"class",
-				"outer-container"
+				"id",
+				"menu-title"
 			);
-
-		header.appendChild
-			(outerContainer);
-
-		const innerContainer =
-			document.createElement
-				("section");
-
-		innerContainer.setAttribute
-			(
-				"class",
-				"inner-container"
-			);
-
-		header.appendChild
-			(innerContainer);
 
 		const img1 =
 			document.createElement
@@ -88,7 +71,7 @@ class Menu {
 				"left-bee"
 			);
 
-		innerContainer.appendChild
+		header.appendChild
 			(img1);
 
 		const h1 =
@@ -98,8 +81,7 @@ class Menu {
 		h1.textContent =
 			"Menu";
 
-		innerContainer.appendChild
-			(h1);
+		header.appendChild(h1);
 
 		const img2 =
 			document.createElement
@@ -123,14 +105,7 @@ class Menu {
 				"right-bee"
 			);
 
-		innerContainer.appendChild
-			(img2);
-
-		outerContainer.appendChild
-			(innerContainer);
-
-		header.appendChild
-			(outerContainer);
+		header.appendChild(img2);
 
 		this.#content.appendChild
 			(header);
@@ -138,6 +113,15 @@ class Menu {
 	} // displayHeader()
 
 	//=======================================================================================
+
+	#displayBeverages() {
+
+
+
+	} // displayBeverages()
+
+	//=======================================================================================
+
 
 
 } // class

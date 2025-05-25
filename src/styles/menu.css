@@ -1,41 +1,45 @@
+:root {
+	--card-border: 10px solid rgb(228, 107, 37);
+	--card-background-color: yellow;
+}
+
+/***************************************************************/
+
+body {
+	background-image: url("../assets/images/honeycomb.png");
+}
+
+/***************************************************************/
+
 #content {
 	display: flex;
 	flex-direction: column;
+	background-color: rgb(238, 205, 144);
+	margin-top: 2em;
+	border-radius: 30px;
+	padding: 1em;
 }
 
-/*************************************************************/
+/***************************************************************/
 
-.outer-container {
-	border: 15px solid rgb(231, 138, 17);
-}
-
-/*************************************************************/
-
-.inner-container {
-	background-color: yellow;
-}
-
-/*************************************************************/
-
-.inner-container > header {
+#menu-title {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
-	font-size: 2rem;
+	border: var(--card-border);
+	background-color: var(--card-background-color);
+	margin-left: 5em;
+	margin-right: 5em;
+	font-size: 1.5rem;
 }
 
-/*************************************************************/
-
-.outer-container {
-	margin-top: 1em;
-}
-
-/*************************************************************/
+/***************************************************************/
 
 #left-bee,
 #right-bee {
-	width: 15%;
+	width: 10%;
+	height: auto;
 }
 
-/*************************************************************/
+/***************************************************************/
