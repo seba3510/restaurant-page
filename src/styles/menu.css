@@ -5,9 +5,9 @@
 
 /***************************************************************/
 
-body {
+/* body {
 	background-image: url("../assets/images/honeycomb.png");
-}
+} */
 
 /***************************************************************/
 
@@ -40,6 +40,54 @@ body {
 #right-bee {
 	width: 10%;
 	height: auto;
+}
+
+/***************************************************************/
+
+#menu-container {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 0.5fr 1fr;
+	margin-top: 2em;
+}
+
+/***************************************************************/
+
+#beverages-container {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(1, 0.5fr);
+}
+
+/***************************************************************/
+
+#beverages-container > h2 {
+	margin-left: 5em;
+	margin-top: 1em;
+}
+
+/***************************************************************/
+
+#honey-tea {
+	grid-row: 2;
+}
+
+/***************************************************************/
+
+#honey-tea,
+#berry-tea {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 1em;
+}
+
+/***************************************************************/
+
+#honey-tea > h3::after,
+#berry-tea > h3::after {
+	content: " .............................. ";
+	text-align: center;
 }
 
 /***************************************************************/

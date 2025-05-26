@@ -16,16 +16,10 @@ class Restaurant {
 
 	//===============================================================================
 
-	#menuBtn =
-		document.querySelector
-			("#menu-btn");
-
+	#menuBtn;
 	//===============================================================================
 
-	#contactBtn =
-		document.querySelector
-			("#contact-btn");
-
+	#contactBtn;
 	//===============================================================================
 
 	constructor() {
@@ -76,7 +70,9 @@ class Restaurant {
 
 	displayMenu() {
 
-		this.#menuBtn.addEventListener("click", () => {
+		this.#menuBtn.addEventListener("click", (event) => {
+
+			event.preventDefault();
 
 			menu.display();
 
@@ -97,5 +93,3 @@ const restaurant =
 restaurant.displayHomePage();
 
 restaurant.displayMenu();
-
-//===============================================================================
