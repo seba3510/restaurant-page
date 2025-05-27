@@ -5,12 +5,6 @@
 
 /***************************************************************/
 
-/* body {
-	background-image: url("../assets/images/honeycomb.png");
-} */
-
-/***************************************************************/
-
 #content {
 	display: flex;
 	flex-direction: column;
@@ -46,22 +40,24 @@
 
 #menu-container {
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 0.5fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 0.5fr);
 	margin-top: 2em;
 }
 
 /***************************************************************/
 
-#beverages-container {
+#beverages,
+#appetizers {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(1, 0.5fr);
+	grid-template-rows: 1fr;
+	grid-template-columns: auto;
 }
 
 /***************************************************************/
 
-#beverages-container > h2 {
+#beverages > h2,
+#appetizers > h2 {
 	margin-left: 5em;
 	margin-top: 1em;
 }
@@ -75,19 +71,45 @@
 /***************************************************************/
 
 #honey-tea,
-#berry-tea {
+#berry-tea,
+#toast,
+#fruit {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
 	align-items: center;
-	margin-top: 1em;
 }
 
 /***************************************************************/
 
 #honey-tea > h3::after,
-#berry-tea > h3::after {
-	content: " .............................. ";
-	text-align: center;
+#berry-tea > h3::after,
+#toast > h3::after {
+	content: " .................................";
+}
+
+/***************************************************************/
+
+#beverages {
+	grid-row: 1;
+	grid-column: 1;
+	justify-content: center;
+	gap: 10px;
+}
+
+/***************************************************************/
+
+#appetizers {
+	grid-row: 1;
+	grid-column: 2;
+	justify-content: center;
+	gap: 10px;
+}
+
+/***************************************************************/
+
+#fruit > h3::after {
+	content: ".................................................";
 }
 
 /***************************************************************/

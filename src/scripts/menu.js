@@ -12,12 +12,27 @@ class Menu {
 
 	#content;
 
+	#menu;
+
 	//=======================================================================================
 	constructor() {
 
 		this.#content =
 			document.querySelector
 				("#content");
+
+		this.#menu =
+			document.createElement
+				("section");
+
+		this.#menu.setAttribute
+			(
+				"id",
+				"menu-container"
+			);
+
+		// this.#content.appendChild
+		// 	(menu);
 
 	} // constructor()
 
@@ -30,6 +45,8 @@ class Menu {
 		this.#displayHeader();
 
 		this.#displayBeverages();
+
+		this.displayAppetizers();
 
 	} // display()
 
@@ -116,21 +133,10 @@ class Menu {
 
 		const selectors =
 			[
-				"menu-container",
-				"beverages-container",
+				"beverages",
 				"honey-tea",
 				"berry-tea"
 			];
-
-		const menu =
-			document.createElement
-				("section");
-
-		menu.setAttribute
-			(
-				"id",
-				selectors[0]
-			);
 
 		const beverages =
 			document.createElement
@@ -150,9 +156,6 @@ class Menu {
 			"Beverages";
 
 		beverages.appendChild(h2);
-
-		menu.appendChild
-			(beverages);
 
 		const honeyTea =
 			document.createElement
@@ -186,8 +189,11 @@ class Menu {
 				beverages
 			);
 
-		this.#content.appendChild
+		this.#menu.appendChild
 			(beverages);
+
+		this.#content.appendChild
+			(menu);
 
 	} // displayBeverages()
 
@@ -214,7 +220,6 @@ class Menu {
 		berryTea.appendChild(para);
 
 		beverages.appendChild(berryTea);
-
 
 	} // displayBerryTea()
 
@@ -248,6 +253,75 @@ class Menu {
 	} // displayHoneyTea()
 
 	//=======================================================================================
+
+	displayAppetizers() {
+
+		const selectors =
+			[
+				"menu-container",
+				"appetizers",
+				"toast",
+				"fruit"
+			];
+
+		const appetizers =
+			document.createElement
+				("section");
+
+		appetizers.setAttribute
+			(
+				"id",
+				selectors[1]
+			);
+
+		const h2 =
+			document.createElement
+				("h2");
+
+		h2.textContent =
+			"Appetizers";
+
+		appetizers.appendChild(h2);
+
+		const toast =
+			document.createElement
+				("section");
+
+		toast.setAttribute
+			(
+				"id",
+				selectors[2]
+			);
+
+		const h3 =
+			document.createElement
+				("h3");
+
+		h3.textContent =
+			"Toast and Jam";
+
+		toast.appendChild(h3);
+
+		const para =
+			document.createElement
+				("p");
+
+		para.textContent =
+			"$1";
+
+		toast.appendChild(para);
+
+		appetizers.appendChild(toast);
+
+		this.#menu.appendChild(appetizers);
+
+		// this.#content.appendChild(this.#menu);
+
+
+	} // displayAppetizers()
+
+	//=======================================================================================
+
 
 } // class
 
