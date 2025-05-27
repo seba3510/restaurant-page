@@ -28,7 +28,7 @@ class Menu {
 		this.#menu.setAttribute
 			(
 				"id",
-				"menu-container"
+				"menu"
 			);
 
 	} // constructor()
@@ -44,9 +44,9 @@ class Menu {
 		this.#content.appendChild
 			(this.#menu);
 
-		this.#displayBeverages();
+		// this.#displayBeverages();
 
-		this.#displayAppetizers();
+		// this.#displayAppetizers();
 
 	} // display()
 
@@ -60,8 +60,8 @@ class Menu {
 
 		header.setAttribute
 			(
-				"id",
-				"menu-title"
+				"class",
+				"title"
 			);
 
 		const img1 =
@@ -122,8 +122,7 @@ class Menu {
 
 		header.appendChild(img2);
 
-		this.#content.appendChild
-			(header);
+		this.#menu.appendChild(header);
 
 	} // displayHeader()
 

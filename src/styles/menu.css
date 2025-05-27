@@ -38,88 +38,25 @@
 
 /***************************************************************/
 
-#menu-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 0.5fr);
+#menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	margin-top: 2em;
 }
 
 /***************************************************************/
 
-#beverages,
-#appetizers {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: auto;
-}
-
-/***************************************************************/
-
-#beverages > h2,
-#appetizers > h2 {
-	margin-left: 5em;
-	margin-top: 1em;
-}
-
-/***************************************************************/
-
-#honey-tea {
-	grid-row: 2;
-}
-
-/***************************************************************/
-
-#honey-tea,
-#berry-tea,
-#toast,
-#fruit {
+#menu > .title {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-evenly;
 	align-items: center;
-}
-
-/***************************************************************/
-
-#honey-tea > h3::after {
-	content: " ...............................";
-}
-
-/***************************************************************/
-
-#berry-tea > h3::after {
-	content: "..................................";
-}
-
-/***************************************************************/
-
-#beverages {
-	grid-row: 1;
-	grid-column: 1;
-	justify-content: center;
-	gap: 10px;
-}
-
-/***************************************************************/
-
-#appetizers {
-	grid-row: 1;
-	grid-column: 2;
-	justify-content: center;
-	gap: 10px;
-}
-
-/***************************************************************/
-
-#toast > h3::after {
-	content: "............................................";
-}
-
-/***************************************************************/
-
-#fruit > h3::after {
-	content: "..................................................";
+	border: var(--card-border);
+	background-color: var(--card-background-color);
+	color: black;
+	font-size: 1.6rem;
 }
 
 /***************************************************************/
