@@ -31,9 +31,6 @@ class Menu {
 				"menu-container"
 			);
 
-		// this.#content.appendChild
-		// 	(menu);
-
 	} // constructor()
 
 	//=======================================================================================
@@ -44,9 +41,12 @@ class Menu {
 
 		this.#displayHeader();
 
+		this.#content.appendChild
+			(this.#menu);
+
 		this.#displayBeverages();
 
-		this.displayAppetizers();
+		this.#displayAppetizers();
 
 	} // display()
 
@@ -145,7 +145,7 @@ class Menu {
 		beverages.setAttribute
 			(
 				"id",
-				selectors[1]
+				selectors[0]
 			);
 
 		const h2 =
@@ -164,7 +164,7 @@ class Menu {
 		honeyTea.setAttribute
 			(
 				"id",
-				selectors[2]
+				selectors[1]
 			);
 
 		this.#displayHoneyTea
@@ -180,7 +180,7 @@ class Menu {
 		berryTea.setAttribute
 			(
 				"id",
-				selectors[3]
+				selectors[2]
 			);
 
 		this.#displayBerryTea
@@ -191,9 +191,6 @@ class Menu {
 
 		this.#menu.appendChild
 			(beverages);
-
-		this.#content.appendChild
-			(menu);
 
 	} // displayBeverages()
 
@@ -234,7 +231,6 @@ class Menu {
 		h3.textContent =
 			"Honey Tea";
 
-
 		honeyTea.appendChild
 			(h3);
 
@@ -254,11 +250,10 @@ class Menu {
 
 	//=======================================================================================
 
-	displayAppetizers() {
+	#displayAppetizers() {
 
 		const selectors =
 			[
-				"menu-container",
 				"appetizers",
 				"toast",
 				"fruit"
@@ -271,7 +266,7 @@ class Menu {
 		appetizers.setAttribute
 			(
 				"id",
-				selectors[1]
+				selectors[0]
 			);
 
 		const h2 =
@@ -281,7 +276,55 @@ class Menu {
 		h2.textContent =
 			"Appetizers";
 
-		appetizers.appendChild(h2);
+		appetizers.appendChild
+			(h2);
+
+		this.#displayToast
+			(
+				selectors,
+				appetizers
+			);
+
+		const fruit =
+			document.createElement
+				("section");
+
+		fruit.setAttribute
+			(
+				"id",
+				selectors[2]
+			);
+
+		const h3 =
+			document.createElement
+				("h3")
+
+		h3.textContent =
+			"Fresh Fruit";
+
+		fruit.appendChild(h3);
+
+		const para =
+			document.createElement
+				("p");
+
+		para.textContent =
+			"$3";
+
+		fruit.appendChild
+			(para);
+
+		appetizers.appendChild
+			(fruit);
+
+		this.#menu.appendChild
+			(appetizers);
+
+	} // displayAppetizers()
+
+	//=======================================================================================
+
+	#displayToast(selectors, appetizers) {
 
 		const toast =
 			document.createElement
@@ -290,7 +333,7 @@ class Menu {
 		toast.setAttribute
 			(
 				"id",
-				selectors[2]
+				selectors[1]
 			);
 
 		const h3 =
@@ -309,19 +352,15 @@ class Menu {
 		para.textContent =
 			"$1";
 
-		toast.appendChild(para);
+		toast.appendChild
+			(para);
 
-		appetizers.appendChild(toast);
+		appetizers.appendChild
+			(toast);
 
-		this.#menu.appendChild(appetizers);
-
-		// this.#content.appendChild(this.#menu);
-
-
-	} // displayAppetizers()
+	} // displayToast()
 
 	//=======================================================================================
-
 
 } // class
 
