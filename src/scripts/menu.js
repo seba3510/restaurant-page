@@ -39,14 +39,12 @@ class Menu {
 
 		this.#content.innerHTML = "";
 
-		this.#displayHeader();
-
 		this.#content.appendChild
 			(this.#menu);
 
-		// this.#displayBeverages();
+		this.#displayHeader();
 
-		// this.#displayAppetizers();
+		this.#displayStarters();
 
 	} // display()
 
@@ -58,11 +56,7 @@ class Menu {
 			document.createElement
 				("header");
 
-		header.setAttribute
-			(
-				"class",
-				"title"
-			);
+		this.#menu.appendChild(header);
 
 		const img1 =
 			document.createElement
@@ -86,8 +80,7 @@ class Menu {
 				"left-bee"
 			);
 
-		header.appendChild
-			(img1);
+		header.appendChild(img1);
 
 		const h1 =
 			document.createElement
@@ -122,242 +115,122 @@ class Menu {
 
 		header.appendChild(img2);
 
-		this.#menu.appendChild(header);
-
 	} // displayHeader()
 
+
 	//=======================================================================================
 
-	#displayBeverages() {
+	#displayStarters() {
 
-		const selectors =
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"starters"
+			);
+
+		this.#menu.appendChild(container);
+
+		const h1 =
+			document.createElement
+				("h1");
+
+		h1.textContent =
+			"Starters";
+
+		container.appendChild(h1);
+
+		const names =
 			[
-				"beverages",
-				"honey-tea",
-				"berry-tea"
+				"Starter #1",
+				"Starter #2",
+				"Starter #3"
 			];
 
-		const beverages =
-			document.createElement
-				("section");
-
-		beverages.setAttribute
-			(
-				"id",
-				selectors[0]
-			);
-
-		const h2 =
-			document.createElement
-				("h2");
-
-		h2.textContent =
-			"Beverages";
-
-		beverages.appendChild(h2);
-
-		const honeyTea =
-			document.createElement
-				("section");
-
-		honeyTea.setAttribute
-			(
-				"id",
-				selectors[1]
-			);
-
-		this.#displayHoneyTea
-			(
-				honeyTea,
-				beverages,
-			);
-
-		const berryTea =
-			document.createElement
-				("section");
-
-		berryTea.setAttribute
-			(
-				"id",
-				selectors[2]
-			);
-
-		this.#displayBerryTea
-			(
-				berryTea,
-				beverages
-			);
-
-		this.#menu.appendChild
-			(beverages);
-
-	} // displayBeverages()
-
-	//=======================================================================================
-
-	#displayBerryTea(berryTea, beverages) {
-
-		const h3 =
-			document.createElement
-				("h3");
-
-		h3.textContent =
-			"Berry Tea";
-
-		berryTea.appendChild(h3);
-
-		const para =
-			document.createElement
-				("p");
-
-		para.textContent =
-			"$5";
-
-		berryTea.appendChild(para);
-
-		beverages.appendChild(berryTea);
-
-	} // displayBerryTea()
-
-	//=======================================================================================
-
-	#displayHoneyTea(honeyTea, beverages) {
-
-		const h3 =
-			document.createElement
-				("h3");
-
-		h3.textContent =
-			"Honey Tea";
-
-		honeyTea.appendChild
-			(h3);
-
-		const para =
-			document.createElement
-				("p");
-
-		para.textContent =
-			"$5";
-
-		honeyTea.appendChild
-			(para);
-
-		beverages.appendChild(honeyTea);
-
-	} // displayHoneyTea()
-
-	//=======================================================================================
-
-	#displayAppetizers() {
-
-		const selectors =
+		const descriptions =
 			[
-				"appetizers",
-				"toast",
-				"fruit"
+				"Ut blandit massa at arcu rhoncus, quis porttitor mauris viverra.",
+				"Curabitur magna mauris, pulvinar eget arcu vitae, ullamcorper euismod sem. Quisque non mi nec tellus euismod porttitor at quis tellus. ",
+				"Pellentesque in est metus. Curabitur luctus ut purus et vehicula. Phasellus ut laoreet ligula. Aenean interdum purus mollis vestibulum sollicitudin."
 			];
 
-		const appetizers =
-			document.createElement
-				("section");
+		const prices =
+			[
+				"$6.95",
+				"$13.00",
+				"$7.25"
+			];
 
-		appetizers.setAttribute
-			(
-				"id",
-				selectors[0]
-			);
+		const starters =
+			[
+				{
+					name: names[0],
+					description: descriptions[0],
+					price: prices[0]
+				},
+				{
+					name: names[1],
+					description: descriptions[1],
+					price: prices[1]
+				},
+				{
+					name: names[2],
+					description: descriptions[2],
+					price: prices[2]
+				}
+			];
 
-		const h2 =
-			document.createElement
-				("h2");
+		const n =
+			starters.length;
 
-		h2.textContent =
-			"Appetizers";
+		for (let i = 0; i < n; i++) {
 
-		appetizers.appendChild
-			(h2);
+			const starter =
+				document.createElement
+					("section");
 
-		this.#displayToast
-			(
-				selectors,
-				appetizers
-			);
+			starter.setAttribute
+				(
+					"class",
+					`starter-${i + 1}`
+				);
 
-		const fruit =
-			document.createElement
-				("section");
+			container.appendChild(starter);
 
-		fruit.setAttribute
-			(
-				"id",
-				selectors[2]
-			);
+			const h2 =
+				document.createElement
+					("h2");
 
-		const h3 =
-			document.createElement
-				("h3")
+			h2.textContent =
+				starters[i].name;
 
-		h3.textContent =
-			"Fresh Fruit";
+			starter.appendChild(h2);
 
-		fruit.appendChild(h3);
+			const span =
+				document.createElement
+					("span");
 
-		const para =
-			document.createElement
-				("p");
+			span.textContent =
+				starters[i].price;
 
-		para.textContent =
-			"$3";
+			starter.appendChild(span);
 
-		fruit.appendChild
-			(para);
+			const para =
+				document.createElement
+					("p");
 
-		appetizers.appendChild
-			(fruit);
+			para.textContent =
+				starters[i].description;
 
-		this.#menu.appendChild
-			(appetizers);
+			starter.appendChild(para);
 
-	} // displayAppetizers()
+		} // for
 
-	//=======================================================================================
 
-	#displayToast(selectors, appetizers) {
-
-		const toast =
-			document.createElement
-				("section");
-
-		toast.setAttribute
-			(
-				"id",
-				selectors[1]
-			);
-
-		const h3 =
-			document.createElement
-				("h3");
-
-		h3.textContent =
-			"Toast and Jam";
-
-		toast.appendChild(h3);
-
-		const para =
-			document.createElement
-				("p");
-
-		para.textContent =
-			"$1";
-
-		toast.appendChild
-			(para);
-
-		appetizers.appendChild
-			(toast);
-
-	} // displayToast()
+	} // displayStarters()
 
 	//=======================================================================================
 
