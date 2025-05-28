@@ -25,6 +25,8 @@ html {
 /***********************************************************************************/
 
 .outer-container {
+	display: flex;
+	flex-direction: column;
 	border: var(--card-border);
 	margin-left: 2em;
 	margin-right: 2em;
@@ -43,9 +45,9 @@ html {
 #content {
 	display: flex;
 	flex-direction: column;
-	/* margin-top: 1em; */
 	background-color: rgb(238, 205, 144);
-	margin-left: 1em;
+	width: 70%;
+	margin-left: 10em;
 	margin-right: 1em;
 	border-radius: 50px;
 	margin-top: 5em;

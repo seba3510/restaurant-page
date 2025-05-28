@@ -46,6 +46,8 @@ class Menu {
 
 		this.#displayStarters();
 
+		this.#displayEntrees();
+
 	} // display()
 
 	//=======================================================================================
@@ -233,6 +235,128 @@ class Menu {
 	} // displayStarters()
 
 	//=======================================================================================
+
+
+	#displayEntrees() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"entrees"
+			);
+
+		this.#menu.appendChild(container);
+
+		const h2 =
+			document.createElement
+				("h2");
+
+		h2.textContent =
+			"Entrees";
+
+		container.appendChild(h2);
+
+		const names =
+			[
+				"Entree #1",
+				"Entree #2",
+				"Entree #3"
+			];
+
+		const prices =
+			[
+				"$25.22",
+				"$29.00",
+				"$23.95"
+			];
+
+		const descriptions =
+			[
+				"Donec efficitur, nibh egestas varius venenatis, ex " +
+				"sem vulputate enim, elementum condimentum libero " +
+				"turpis id leo",
+				"In feugiat, massa sit amet tincidunt congue, dui " +
+				"neque consectetur velit, id consectetur magna odio " +
+				"nec nisi.Aenean maximus convallis ultricies.",
+				"Donec efficitur, nibh egestas varius venenatis, ex " +
+				"sem vulputate enim, elementum condimentum libero " +
+				"turpis id leo."
+			];
+
+		const entrees =
+			[
+				{
+					name: names[0],
+					price: prices[0],
+					description: descriptions[0],
+				},
+				{
+					name: names[1],
+					price: prices[1],
+					description: descriptions[1],
+				},
+				{
+					name: names[2],
+					price: prices[2],
+					description: descriptions[2],
+				}
+			];
+
+		const n =
+			entrees.length;
+
+		for (let i = 0; i < n; i++) {
+
+			const entree =
+				document.createElement
+					("section");
+
+			entree.setAttribute
+				(
+					"class",
+					`entree-${i + 1}`
+				);
+
+			container.appendChild(entree);
+
+			const h3 =
+				document.createElement
+					("h3");
+
+			h3.textContent =
+				entrees[i].name;
+
+			entree.appendChild(h3);
+
+			const span =
+				document.createElement
+					("span");
+
+			span.textContent =
+				entrees[i].price;
+
+			entree.appendChild(span);
+
+			const para =
+				document.createElement
+					("p");
+
+			para.textContent =
+				entrees[i].description;
+
+			entree.appendChild(para);
+
+		} // for
+
+	} // displayEntrees()
+
+
+	//=======================================================================================
+
 
 } // class
 
