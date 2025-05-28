@@ -93,3 +93,4 @@ const restaurant =
 restaurant.displayHomePage();
 
 restaurant.displayMenu();
+

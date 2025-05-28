@@ -42,6 +42,7 @@
 #menu {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto 1fr 1fr;
 }
 
 /***************************************************************/
@@ -114,6 +115,7 @@
 #entrees {
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-row: 3;
 	color: black;
 	margin-top: 1em;
 }

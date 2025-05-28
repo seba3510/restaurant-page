@@ -1,4 +1,5 @@
 import "../styles/menu.css";
+
 //=======================================================================================
 
 import image1 from "../assets/images/left-bee.png";
@@ -8,6 +9,7 @@ import image1 from "../assets/images/left-bee.png";
 import image2 from "../assets/images/right-bee.png";
 
 //=======================================================================================
+
 class Menu {
 
 	#content;
@@ -15,6 +17,7 @@ class Menu {
 	#menu;
 
 	//=======================================================================================
+
 	constructor() {
 
 		this.#content =
@@ -39,6 +42,8 @@ class Menu {
 
 		this.#content.innerHTML = "";
 
+		this.#menu.innerHTML = "";
+
 		this.#content.appendChild
 			(this.#menu);
 
@@ -58,7 +63,8 @@ class Menu {
 			document.createElement
 				("header");
 
-		this.#menu.appendChild(header);
+		this.#menu.appendChild
+			(header);
 
 		const img1 =
 			document.createElement
@@ -82,7 +88,8 @@ class Menu {
 				"left-bee"
 			);
 
-		header.appendChild(img1);
+		header.appendChild
+			(img1);
 
 		const h1 =
 			document.createElement
@@ -115,10 +122,10 @@ class Menu {
 				"right-bee"
 			);
 
-		header.appendChild(img2);
+		header.appendChild
+			(img2);
 
 	} // displayHeader()
-
 
 	//=======================================================================================
 
@@ -134,7 +141,8 @@ class Menu {
 				"starters"
 			);
 
-		this.#menu.appendChild(container);
+		this.#menu.appendChild
+			(container);
 
 		const h1 =
 			document.createElement
@@ -143,7 +151,8 @@ class Menu {
 		h1.textContent =
 			"Starters";
 
-		container.appendChild(h1);
+		container.appendChild
+			(h1);
 
 		const names =
 			[
@@ -155,8 +164,9 @@ class Menu {
 		const descriptions =
 			[
 				"Ut blandit massa at arcu rhoncus, quis porttitor mauris viverra.",
-				"Curabitur magna mauris, pulvinar eget arcu vitae, ullamcorper euismod sem. Quisque non mi nec tellus euismod porttitor at quis tellus. ",
-				"Pellentesque in est metus. Curabitur luctus ut purus et vehicula. Phasellus ut laoreet ligula. Aenean interdum purus mollis vestibulum sollicitudin."
+				"Curabitur magna mauris, pulvinar eget arcu vitae, ullamcorper euismod sem. ",
+				"Pellentesque in est metus. " +
+				"Curabitur luctus ut purus et vehicula. Phasellus ut laoreet ligula."
 			];
 
 		const prices =
@@ -200,7 +210,8 @@ class Menu {
 					`starter-${i + 1}`
 				);
 
-			container.appendChild(starter);
+			container.appendChild
+				(starter);
 
 			const h2 =
 				document.createElement
@@ -218,7 +229,8 @@ class Menu {
 			span.textContent =
 				starters[i].price;
 
-			starter.appendChild(span);
+			starter.appendChild
+				(span);
 
 			const para =
 				document.createElement
@@ -227,15 +239,14 @@ class Menu {
 			para.textContent =
 				starters[i].description;
 
-			starter.appendChild(para);
+			starter.appendChild
+				(para);
 
 		} // for
-
 
 	} // displayStarters()
 
 	//=======================================================================================
-
 
 	#displayEntrees() {
 
@@ -249,7 +260,8 @@ class Menu {
 				"entrees"
 			);
 
-		this.#menu.appendChild(container);
+		this.#menu.appendChild
+			(container);
 
 		const h2 =
 			document.createElement
@@ -258,7 +270,8 @@ class Menu {
 		h2.textContent =
 			"Entrees";
 
-		container.appendChild(h2);
+		container.appendChild
+			(h2);
 
 		const names =
 			[
@@ -321,7 +334,8 @@ class Menu {
 					`entree-${i + 1}`
 				);
 
-			container.appendChild(entree);
+			container.appendChild
+				(entree);
 
 			const h3 =
 				document.createElement
@@ -330,7 +344,8 @@ class Menu {
 			h3.textContent =
 				entrees[i].name;
 
-			entree.appendChild(h3);
+			entree.appendChild
+				(h3);
 
 			const span =
 				document.createElement
@@ -339,7 +354,8 @@ class Menu {
 			span.textContent =
 				entrees[i].price;
 
-			entree.appendChild(span);
+			entree.appendChild
+				(span);
 
 			const para =
 				document.createElement
@@ -348,15 +364,14 @@ class Menu {
 			para.textContent =
 				entrees[i].description;
 
-			entree.appendChild(para);
+			entree.appendChild
+				(para);
 
 		} // for
 
 	} // displayEntrees()
 
-
 	//=======================================================================================
-
 
 } // class
 
