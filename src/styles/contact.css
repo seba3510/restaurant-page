@@ -1,0 +1,36 @@
+:root {
+	--card-background-color: yellow;
+	--card-border: 10px solid rgb(225, 96, 45);
+	--card-text-color: black;
+}
+
+/****************************************************/
+
+#contact {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	color: var(--card-text-color);
+}
+
+/****************************************************/
+
+#contact > header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: yellow;
+	border: var(--card-border);
+	color: var(--card-text-color);
+}
+
+/****************************************************/
+
+#bee-1,
+#bee-2 {
+	width: 10%;
+	height: auto;
+}
+
+/****************************************************/
