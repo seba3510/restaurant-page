@@ -257,7 +257,6 @@
 	grid-template-columns: var(--grid-item-columns);
 	grid-row: 2;
 	margin-top: 2em;
-	border: 2px solid blue;
 }
 
 /***************************************************************/
@@ -275,5 +274,3 @@
 	grid-template-columns: var(--grid-item-columns);
 	margin-top: 2em;
 }
-
-/***************************************************************/
