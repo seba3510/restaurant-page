@@ -2,6 +2,8 @@
 	--card-border: 10px solid rgb(228, 107, 37);
 	--card-background-color: yellow;
 	--starters-margin-top: 1em;
+	--lunch-padding-left: 1.2em;
+	--grid-item-columns: 1fr 1fr;
 }
 
 /***************************************************************/
@@ -9,6 +11,7 @@
 #content {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	background-color: rgb(238, 205, 144);
 	margin-top: 2em;
 	border-radius: 30px;
@@ -24,7 +27,6 @@
 	align-items: center;
 	border: var(--card-border);
 	background-color: var(--card-background-color);
-	margin-left: 5em;
 	margin-right: 5em;
 	font-size: 1.5rem;
 }
@@ -41,7 +43,7 @@
 
 #menu {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto 1fr 1fr;
 }
 
@@ -51,7 +53,6 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-self: center;
 	align-items: center;
 	border: var(--card-border);
 	background-color: var(--card-background-color);
@@ -65,10 +66,13 @@
 #starters {
 	display: grid;
 	grid-template-columns: 1fr;
-	align-items: center;
-	/* grid-template-rows: 0.5fr 0.5fr 0.5fr; */
+	/* justify-items: center; */
+	/* align-items: center; */
 	color: black;
 	margin-top: 1em;
+	/* justify-items: center; */
+	margin-left: 5em;
+	justify-self: center;
 }
 
 /***************************************************************/
@@ -80,34 +84,51 @@
 
 /***************************************************************/
 
-.starter-1 {
+#starter-1 {
 	display: grid;
-	grid-template-columns: 0.5fr 0.5fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row: 2;
 	grid-column: 1;
-	margin-top: var(--starters-margin-top);
+	margin-top: 2em;
 }
 
 /***************************************************************/
 
-.starter-2 {
+#starter-1 > span,
+#starter-2 > span,
+#starter-3 > span,
+#lunch-1 > span,
+#lunch-2 > span,
+#lunch-3 > span,
+#lunch-4 > span,
+#entree-1 > span,
+#entree-2 > span,
+#entree-3 > span,
+#pizza-1 > span,
+#pizza-2 > span,
+#pizza-3 > span {
+	text-align: center;
+}
+
+/***************************************************************/
+
+#starter-2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-row: 3;
 	grid-column: 1;
 	margin-top: var(--starters-margin-top);
-	width: 100%;
 }
 
 /***************************************************************/
 
-.starter-3 {
+#starter-3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-row: 4;
 	grid-column: 1;
 	margin-top: var(--starters-margin-top);
-	width: 100%;
+	/* width: 100%; */
 }
 
 /***************************************************************/
@@ -115,9 +136,11 @@
 #entrees {
 	display: grid;
 	grid-template-columns: 1fr;
+	justify-self: center;
 	grid-row: 3;
 	color: black;
 	margin-top: 1em;
+	margin-left: 5em;
 }
 
 /***************************************************************/
@@ -129,16 +152,17 @@
 
 /***************************************************************/
 
-.entree-1 {
+#entree-1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-row: 2;
 	grid-column: 1;
+	/* justify-items: center; */
 }
 
 /***************************************************************/
 
-.entree-2 {
+#entree-2 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-row: 3;
@@ -147,9 +171,109 @@
 
 /***************************************************************/
 
-.entree-3 {
+#entree-3 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-row: 4;
 	grid-column: 1;
+	/* justify-items: center; */
 }
+
+/***************************************************************/
+
+#lunch-specials {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-self: center;
+	grid-row: 2;
+	grid-column: 2;
+	color: black;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+#entrees > h1,
+#starters > h1 {
+	text-align: center;
+	margin-top: 1em;
+}
+
+/***************************************************************/
+
+#lunch-1 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: var(--starters-margin-top);
+	grid-row: 2;
+}
+
+/***************************************************************/
+
+#lunch-2 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: var(--starters-margin-top);
+	grid-row: 3;
+}
+
+/***************************************************************/
+
+#lunch-3 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: var(--starters-margin-top);
+	grid-row: 4;
+}
+
+/***************************************************************/
+
+#lunch-4 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: var(--starters-margin-top);
+	grid-row: 5;
+}
+
+/***************************************************************/
+
+#pizza {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-left: 2em;
+}
+
+/***************************************************************/
+
+#pizza > h1 {
+	text-align: center;
+	margin-top: 1em;
+}
+
+/***************************************************************/
+
+#pizza-1 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	grid-row: 2;
+	margin-top: 2em;
+	border: 2px solid blue;
+}
+
+/***************************************************************/
+
+#pizza-2 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: 2em;
+}
+
+/***************************************************************/
+
+#pizza-3 {
+	display: grid;
+	grid-template-columns: var(--grid-item-columns);
+	margin-top: 2em;
+}
+
+/***************************************************************/

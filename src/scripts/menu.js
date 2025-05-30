@@ -53,6 +53,11 @@ class Menu {
 
 		this.#displayEntrees();
 
+		this.#displayLunches();
+
+		this.#displayPizzas();
+
+
 	} // display()
 
 	//=======================================================================================
@@ -206,7 +211,7 @@ class Menu {
 
 			starter.setAttribute
 				(
-					"class",
+					"id",
 					`starter-${i + 1}`
 				);
 
@@ -263,15 +268,15 @@ class Menu {
 		this.#menu.appendChild
 			(container);
 
-		const h2 =
+		const h1 =
 			document.createElement
-				("h2");
+				("h1");
 
-		h2.textContent =
+		h1.textContent =
 			"Entrees";
 
 		container.appendChild
-			(h2);
+			(h1);
 
 		const names =
 			[
@@ -330,22 +335,22 @@ class Menu {
 
 			entree.setAttribute
 				(
-					"class",
+					"id",
 					`entree-${i + 1}`
 				);
 
 			container.appendChild
 				(entree);
 
-			const h3 =
+			const h2 =
 				document.createElement
-					("h3");
+					("h2");
 
-			h3.textContent =
+			h2.textContent =
 				entrees[i].name;
 
 			entree.appendChild
-				(h3);
+				(h2);
 
 			const span =
 				document.createElement
@@ -373,6 +378,270 @@ class Menu {
 
 	//=======================================================================================
 
+	#displayLunches() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"lunch-specials"
+			);
+
+		this.#menu.appendChild
+			(container);
+
+		const h1 =
+			document.createElement
+				("h1");
+
+		h1.textContent =
+			"Lunch Specials";
+
+		container.appendChild
+			(h1);
+
+		const names =
+			[
+				"Lunch #1",
+				"Lunch #2",
+				"Lunch #3",
+				"Lunch #4"
+			];
+
+		const prices =
+			[
+				"$6.85",
+				"$6.95",
+				"$8.00",
+				"$11.25"
+			];
+
+		const descriptions =
+			[
+				"unc a est at sem maximus bibendum agestas at quam",
+				"Donec efficitur, nibh egestas varius venenatis, ex " +
+				"sem vulputate enim, elementum condimentum libero " +
+				"turpis id leo.",
+				"ras dapibus risus sed euismod lacinia. Suspendisse " +
+				"condimentum cursus blandit. Curabitur sit amet odio " +
+				"at risus malesuada sollicitudin id sed mauris.",
+				"ras dapibus risus sed euismod lacinia. Suspendisse " +
+				"condimentum cursus blandit. Curabitur sit amet odio " +
+				"at risus malesuada sollicitudin id sed mauris."
+			];
+
+		const lunches =
+			[
+				{
+					name: names[0],
+					price: prices[0],
+					description: descriptions[0],
+				},
+				{
+					name: names[1],
+					price: prices[1],
+					description: descriptions[1],
+
+				},
+				{
+					name: names[2],
+					price: prices[2],
+					description: descriptions[2]
+				},
+				{
+					name: names[3],
+					price: prices[3],
+					description: descriptions[3]
+				}
+			];
+
+		const n =
+			lunches.length;
+
+		for (let i = 0; i < n; i++) {
+
+			const lunch =
+				document.createElement
+					("section");
+
+			lunch.setAttribute
+				(
+					"id",
+					`lunch-${i + 1}`
+				);
+
+			container.appendChild
+				(lunch);
+
+			const h2 =
+				document.createElement
+					("h2");
+
+			h2.textContent =
+				lunches[i].name;
+
+			lunch.appendChild
+				(h2);
+
+			const span =
+				document.createElement
+					("span");
+
+			span.textContent =
+				lunches[i].price;
+
+			lunch.appendChild
+				(span);
+
+			const para =
+				document.createElement
+					("p");
+
+			para.textContent =
+				lunches[i].description;
+
+			lunch.appendChild
+				(para);
+
+		} // for
+
+	} // displayLunches()
+
+	//=======================================================================================
+
+	#displayPizzas() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"pizza"
+			);
+
+		this.#menu.appendChild
+			(container);
+
+		const h1 =
+			document.createElement
+				("h1");
+
+		h1.textContent =
+			"Pizza";
+
+		container.appendChild
+			(h1);
+
+		const names =
+			[
+				"Pizza #1",
+				"Pizza #2",
+				"Pizza #3"
+			];
+
+		const prices =
+			[
+				"$16.95",
+				"$16.50",
+				"$30.25"
+			];
+
+		const descriptions =
+			[
+				"Donec efficitur, nibh egestas varius venenatis, ex " +
+				"sem vulputate enim, elementum condimentum libero " +
+				"turpis id leo.",
+				"ellentesque in est metus. Curabitur luctus ut purus " +
+				"et vehicula. Phasellus ut laoreet ligula.",
+				"ras dapibus risus sed euismod lacinia. Suspendisse " +
+				"condimentum cursus blandit. Curabitur sit amet odio " +
+				"at risus malesuada sollicitudin id sed mauris."
+			];
+
+		const pizzas =
+			[
+				{
+					name: names[0],
+					price: prices[0],
+					description: descriptions[0],
+				},
+				{
+					name: names[1],
+					price: prices[1],
+					description: descriptions[1],
+
+				},
+				{
+					name: names[2],
+					price: prices[2],
+					description: descriptions[2]
+				},
+				{
+					name: names[3],
+					price: prices[3],
+					description: descriptions[3]
+				}
+			];
+
+		const n =
+			pizzas.length;
+
+		for (let i = 0; i < n; i++) {
+
+			const pizza =
+				document.createElement
+					("section");
+
+			pizza.setAttribute
+				(
+					"id",
+					`pizza-${i + 1}`
+				);
+
+			container.appendChild
+				(pizza);
+
+			const h2 =
+				document.createElement
+					("h2");
+
+			h2.textContent =
+				pizzas[i].name;
+
+			pizza.appendChild
+				(h2);
+
+			const span =
+				document.createElement
+					("span");
+
+			span.textContent =
+				pizzas[i].price;
+
+			pizza.appendChild
+				(span);
+
+			const para =
+				document.createElement
+					("p");
+
+			para.textContent =
+				descriptions[i];
+
+			pizza.appendChild
+				(para);
+
+		} // for
+
+	} // displayPizzas()
+
+	//=======================================================================================
+
 } // class
 
 //=======================================================================================
@@ -380,4 +649,7 @@ class Menu {
 const menu =
 	new Menu();
 
+menu.display();
+
 export { menu };
+
