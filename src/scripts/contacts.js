@@ -144,6 +144,9 @@ class Contacts {
 				"chef"
 			);
 
+		this.#contacts.appendChild
+			(container);
+
 		const h2 =
 			document.createElement
 				("h2");
