@@ -37,7 +37,8 @@
 
 /****************************************************/
 
-#chef {
+#chef,
+#manager {
 	display: flex;
 	flex-direction: column;
 	justify-self: center;
@@ -62,3 +63,7 @@
 }
 
 /****************************************************/
+
+#manager {
+	margin-top: 1.5em;
+}
