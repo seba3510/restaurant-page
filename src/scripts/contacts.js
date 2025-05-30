@@ -1,4 +1,4 @@
-import "../styles/contact.css";
+import "../styles/contacts.css";
 
 //==================================================================
 
@@ -10,11 +10,11 @@ import image2 from "../assets/images/right-bee.png";
 
 //==================================================================
 
-class Contact {
+class Contacts {
 
 	#content;
 
-	#contact;
+	#contacts;
 
 	//==================================================================
 
@@ -25,14 +25,14 @@ class Contact {
 			document.querySelector
 				("#content");
 
-		this.#contact =
+		this.#contacts =
 			document.createElement
 				("section");
 
-		this.#contact.setAttribute
+		this.#contacts.setAttribute
 			(
 				"id",
-				"contact"
+				"contacts"
 			);
 
 	} // constructor()
@@ -43,12 +43,14 @@ class Contact {
 
 		this.#content.innerHTML = "";
 
-		this.#contact.innerHTML = "";
+		this.#contacts.innerHTML = "";
 
 		this.#content.appendChild
-			(this.#contact);
+			(this.#contacts);
 
 		this.#displayHeader();
+
+		this.#displayChef();
 
 	} // display()
 
@@ -60,7 +62,7 @@ class Contact {
 			document.createElement
 				("header");
 
-		this.#contact.appendChild
+		this.#contacts.appendChild
 			(header);
 
 		const img1 =
@@ -123,18 +125,98 @@ class Contact {
 		header.appendChild
 			(img2);
 
-		this.#contact.appendChild
+		this.#contacts.appendChild
 			(header);
 
 	} // displayHeader()
 
 	//==================================================================
 
+	#displayChef() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"chef"
+			);
+
+		const h2 =
+			document.createElement
+				("h2");
+
+		h2.textContent =
+			"Contact #1";
+
+		container.appendChild
+			(h2);
+
+		const info =
+			document.createElement
+				("section");
+
+		info.setAttribute
+			(
+				"class",
+				"info"
+			);
+
+		container.appendChild
+			(info);
+
+		const role =
+			document.createElement
+				("h3");
+
+		role.textContent =
+			"Chef";
+
+		info.appendChild
+			(role);
+
+		const phonNumber =
+			document.createElement
+				("p");
+
+		phonNumber.textContent =
+			"555-555-5554";
+
+		info.appendChild
+			(phonNumber);
+
+		const email =
+			document.createElement
+				("p");
+
+		const link =
+			document.createElement
+				("a");
+
+		link.setAttribute
+			(
+				"href",
+				"#"
+			);
+
+		link.textContent =
+			"tejoce3283@eduhed.com";
+
+		email.appendChild
+			(link);
+
+		info.appendChild
+			(email);
+
+	} // displayChef()
+
 } // class
 
 //==================================================================
 
-const contact =
-	new Contact();
+const contacts =
+	new Contacts();
 
-export { contact };
+export { contacts };

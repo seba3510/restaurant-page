@@ -6,19 +6,21 @@
 
 /****************************************************/
 
-#contact {
+#contacts {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 0.5fr;
 	grid-template-rows: repeat(4, 1fr);
+	justify-content: center;
+	align-items: center;
 	color: var(--card-text-color);
 }
 
 /****************************************************/
 
-#contact > header {
+#contacts > header {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	background-color: yellow;
 	border: var(--card-border);
@@ -31,6 +33,32 @@
 #bee-2 {
 	width: 10%;
 	height: auto;
+}
+
+/****************************************************/
+
+#chef {
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	border: var(--card-border);
+	background-color: var(--card-background-color);
+	color: var(--card-text-color);
+	width: 60%;
+	padding: 1.2em;
+}
+
+/****************************************************/
+
+#chef > .info {
+	margin-left: 2em;
+	line-height: 1.5;
+}
+
+/****************************************************/
+
+.info > h3 {
+	margin-top: 0.5em;
 }
 
 /****************************************************/

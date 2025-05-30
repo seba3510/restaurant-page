@@ -10,7 +10,7 @@ import { menu } from "./menu.js";
 
 //===============================================================================
 
-import { contact } from "./contact.js";
+import { contacts } from "./contacts.js";
 
 //===============================================================================
 
@@ -92,7 +92,7 @@ class Restaurant {
 
 		this.#contactBtn.addEventListener("click", (event) => {
 
-			contact.display();
+			contacts.display();
 
 		}); // adEventListener
 
