@@ -52,6 +52,8 @@ class Contacts {
 
 		this.#displayChef();
 
+		this.#displayManager();
+
 	} // display()
 
 	//==================================================================
@@ -214,6 +216,91 @@ class Contacts {
 			(email);
 
 	} // displayChef()
+
+	//==================================================================
+
+	#displayManager() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"manager"
+			);
+
+		this.#contacts.appendChild
+			(container);
+
+		const h2 =
+			document.createElement
+				("h2");
+
+		h2.textContent =
+			"Contact #2";
+
+		container.appendChild
+			(h2);
+
+		const info =
+			document.createElement
+				("section");
+
+		info.setAttribute
+			(
+				"class",
+				"info"
+			);
+
+		container.appendChild
+			(info);
+
+		const role =
+			document.createElement
+				("h3");
+
+		role.textContent =
+			"Manager";
+
+		info.appendChild
+			(role);
+
+		const phoneNumber =
+			document.createElement
+				("p");
+
+		phoneNumber.textContent =
+			"555-555-5555";
+
+		info.appendChild
+			(phoneNumber);
+
+		const email =
+			document.createElement
+				("p");
+
+		const link =
+			document.createElement
+				("a");
+
+		link.setAttribute
+			(
+				"href",
+				"#"
+			);
+
+		link.textContent =
+			"w84mk@dcpa.net";
+
+		email.appendChild
+			(link);
+
+		container.appendChild
+			(email);
+
+	} // displayManager()
 
 } // class
 
