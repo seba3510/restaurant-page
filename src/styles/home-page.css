@@ -7,7 +7,6 @@
 
 html {
 	box-sizing: border-box;
-	background-image: url("../assets/images/honeycomb.png");
 }
 
 body {
@@ -42,7 +41,7 @@ h3 {
 /***********************************************************************************/
 
 p {
-	text-wrap: pretty;
+	text-wrap: balance;
 }
 
 /***********************************************************************************/
@@ -76,11 +75,11 @@ h3 {
 
 #content {
 	/* display: flex; */
-	flex-direction: column;
+	/* flex-direction: column; */
 	background-color: rgb(238, 205, 144);
 	width: fit-content;
 	/* width: 70%; */
-	margin-left: 10em;
+	margin-left: 40em;
 	margin-right: 1em;
 	border-radius: 50px;
 	margin-top: 5em;
