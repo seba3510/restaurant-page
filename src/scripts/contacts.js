@@ -54,6 +54,8 @@ class Contacts {
 
 		this.#displayManager();
 
+		this.#displayWaiter();
+
 	} // display()
 
 	//==================================================================
@@ -301,6 +303,93 @@ class Contacts {
 			(email);
 
 	} // displayManager()
+
+	//==================================================================
+
+	#displayWaiter() {
+
+		const container =
+			document.createElement
+				("section");
+
+		container.setAttribute
+			(
+				"id",
+				"waiter"
+			);
+
+		this.#contacts.appendChild
+			(container);
+
+		const h2 =
+			document.createElement
+				("h2");
+
+		h2.textContent =
+			"Contact #3";
+
+		container.appendChild
+			(h2);
+
+		const info =
+			document.createElement
+				("section");
+
+		info.setAttribute
+			(
+				"class",
+				"info"
+			);
+
+		container.appendChild
+			(info);
+
+		const role =
+			document.createElement
+				("h3");
+
+		role.textContent =
+			"Waiter";
+
+		info.appendChild
+			(role);
+
+		const phoneNumber =
+			document.createElement
+				("p");
+
+		phoneNumber.textContent =
+			"555-555-5556";
+
+		info.appendChild
+			(phoneNumber);
+
+		const email =
+			document.createElement
+				("p");
+
+		const link =
+			document.createElement
+				("a");
+
+		link.setAttribute
+			(
+				"href",
+				"#"
+			);
+
+		link.textContent =
+			"xiyemec208@eduhed.com";
+
+		email.appendChild
+			(link);
+
+		container.appendChild
+			(email);
+
+	} // displayWaiter()
+
+	//==================================================================
 
 } // class
 

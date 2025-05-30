@@ -38,7 +38,8 @@
 /****************************************************/
 
 #chef,
-#manager {
+#manager,
+#waiter {
 	display: flex;
 	flex-direction: column;
 	justify-self: center;
@@ -51,7 +52,9 @@
 
 /****************************************************/
 
-#chef > .info {
+#chef > .info,
+#manager > .info,
+#waiter > .info {
 	margin-left: 2em;
 	line-height: 1.5;
 }
@@ -64,6 +67,7 @@
 
 /****************************************************/
 
-#manager {
+#manager,
+#waiter {
 	margin-top: 1.5em;
 }
