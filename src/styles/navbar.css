@@ -1,34 +1,17 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-/*************************************************************************************/
-#tabs {
-	background-color: rgb(238, 205, 144);
-}
-/*************************************************************************************/
-
 nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
+	background-color: #ffde73;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-/*************************************************************************************/
+/********************************************************/
 
 button {
 	cursor: pointer;
-	background-color: red;
-	border: 1px solid black;
-	color: white;
-	border-radius: 20px;
-	font-size: 2em;
-	width: 9%;
-	height: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	padding: 0.5em;
 }
-
-/*************************************************************************************/

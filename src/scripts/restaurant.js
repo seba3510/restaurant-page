@@ -1,16 +1,12 @@
+import "../styles/resets.css";
+
+//===============================================================================
+
 import "../styles/navbar.css";
 
 //===============================================================================
 
 import { homePage } from "./home-page.js";
-
-//===============================================================================
-
-import { menu } from "./menu.js";
-
-//===============================================================================
-
-import { contacts } from "./contacts.js";
 
 //===============================================================================
 
@@ -50,7 +46,9 @@ class Restaurant {
 
 	displayHomePage() {
 
-		this.#homeBtn.addEventListener("click", () => {
+		this.#homeBtn.addEventListener("click", (event) => {
+
+			event.preventDefault();
 
 			homePage.display();
 
@@ -74,30 +72,6 @@ class Restaurant {
 
 	//===============================================================================
 
-	displayMenu() {
-
-		this.#menuBtn.addEventListener("click", (event) => {
-
-			event.preventDefault();
-
-			menu.display();
-
-		}); // addEventListener
-
-	} // displayMenu()
-
-	//===============================================================================
-
-	displayContacts() {
-
-		this.#contactBtn.addEventListener("click", (event) => {
-
-			contacts.display();
-
-		}); // adEventListener
-
-	} // displayContacts()
-
 } // class
 
 //===============================================================================
@@ -108,6 +82,6 @@ const restaurant =
 
 restaurant.displayHomePage();
 
-restaurant.displayMenu();
+// restaurant.displayMenu();
 
-restaurant.displayContacts();
+// restaurant.displayContacts();

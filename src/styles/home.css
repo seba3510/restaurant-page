@@ -1,0 +1,116 @@
+:root {
+	--card-background-color: #ffde73;
+	--card-border-color: rgba(215, 69, 15, 0.915);
+	--card-border: 5px solid var(--card-border-color);
+	--card-margin-top: 2em;
+}
+
+/*********************************************************/
+
+body {
+	background-image: url("../assets/images/honeycomb.png");
+}
+
+/*********************************************************/
+
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*********************************************************/
+
+#home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--card-background-color);
+	margin-top: 2em;
+	border-radius: 20px;
+	/* width: 70%; */
+}
+
+/*********************************************************/
+
+#home > header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 2em;
+	border: 5px solid var(--card-border-color);
+	border-radius: 10px;
+	background-color: yellow;
+	color: black;
+	width: 90%;
+	font-size: 2rem;
+}
+
+/*********************************************************/
+
+#left-bee,
+#right-bee {
+	width: 10%;
+	height: 5%;
+}
+
+/*********************************************************/
+
+#description {
+	display: flex;
+	flex-direction: column;
+	border: var(--card-border);
+	border-radius: 20px;
+	background-color: yellow;
+	color: black;
+	margin-top: 2em;
+	width: 50%;
+	padding: 1em;
+	font-size: 1.5rem;
+}
+
+/*********************************************************/
+
+#description > h2 {
+	text-align: center;
+}
+
+/*********************************************************/
+
+#hours {
+	border: var(--card-border);
+	border-radius: 20px;
+	margin-top: var(--card-margin-top);
+	/* padding: 1em; */
+	background-color: yellow;
+	color: black;
+	font-size: 1.5rem;
+	width: 20%;
+}
+
+/*********************************************************/
+
+#hours > h2 {
+	text-align: center;
+}
+
+/*********************************************************/
+
+#hours > ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+}
+/*********************************************************/
+
+#location {
+	display: flex;
+	flex-direction: column;
+	border: var(--card-border);
+	background-color: yellow;
+	margin-top: var(--card-margin-top);
+	margin-bottom: 2em;
+	padding: 1em;
+}

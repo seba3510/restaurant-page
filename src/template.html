@@ -4,68 +4,58 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Restaurant Page</title>
+		<link rel="stylesheet" href="./styles/resets.css" />
 		<link rel="stylesheet" href="./styles/navbar.css" />
-		<link rel="stylesheet" href="./styles/home-page.css" />
-		<link rel="stylesheet" href="./styles/menu.css" />
-		<link rel="stylesheet" href="./styles/contacts.css" />
+		<link rel="stylesheet" href="./styles/home.css" />
 	</head>
 
 	<body>
-		<header id="tabs">
-			<nav>
-				<button id="home-btn">Home</button>
-				<button id="menu-btn">Menu</button>
-				<button id="contact-btn">Contact</button>
-			</nav>
-		</header>
+		<nav>
+			<button id="home-btn">Home</button>
+			<button id="menu-btn">Menu</button>
+			<button id="contact-btn">Contact</button>
+		</nav>
 
 		<main id="content">
-			<section id="contacts">
+			<section id="home">
 				<header>
 					<img
-						src="./assets/images/left-bee.png"
+						src=".//assets/images/left-bee.png"
 						alt="This is a bee."
-						id="bee-1"
+						id="left-bee"
 					/>
-					<h1>Contact Us</h1>
+					<h1>Beary's Breakfast Bar</h1>
 					<img
 						src="./assets/images/right-bee.png"
 						alt="This is another bee."
-						id="bee-2"
+						id="right-bee"
 					/>
 				</header>
-
-				<section id="chef">
-					<h2>Contact #1</h2>
-					<section class="info">
-						<h3>Chef</h3>
-						<p>555-555-5554</p>
-						<p>
-							<a href="#">tejoce3283@eduhed.com</a>
-						</p>
-					</section>
+				<section id="description">
+					<h2>About Us</h2>
+					<p>
+						Beary's has the best porridge! The atmosphere and
+						customer service make you feel like you are sitting in
+						the middle of the woods, eating like a bear! This is
+						exactly the kind of place that you would like to return
+						again and again.
+					</p>
 				</section>
-				<section id="manager">
-					<h2>Contact #2</h2>
-					<section class="info">
-						<h3>Manager</h3>
-						<p>555-555-5555</p>
-						<p>
-							<a href="#">w84mk@dcpa.net</a>
-						</p>
-					</section>
+				<section id="hours">
+					<h2>Business Hours</h2>
+					<ul>
+						<li>Sunday: 8am - 8pm</li>
+						<li>Monday: 6am - 6pm</li>
+						<li>Tuesday: 6am - 6pm</li>
+						<li>Wednesday: 6am - 6pm</li>
+						<li>Thursday: 6am - 10pm</li>
+						<li>Friday: 6am - 10pm</li>
+						<li>Saturday: 8am - 6pm</li>
+					</ul>
 				</section>
-
-				<section id="waiter">
-					<h2>Contact #3</h2>
-
-					<section class="info">
-						<h3>Waiter</h3>
-						<p>555-555-5556</p>
-						<p>
-							<a href="#">xiyemec208@eduhed.com</a>
-						</p>
-					</section>
+				<section id="location">
+					<h2>Location</h2>
+					<p>123 Forest Drive, Forestville, Main</p>
 				</section>
 			</section>
 		</main>
