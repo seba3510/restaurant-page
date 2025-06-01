@@ -1,3 +1,13 @@
+/*
+	Grid-template-columns: Controls how the grid container is
+							stretched  horizontally.
+
+	grid-template-rows: Controls how the grid container
+						is stretched vertically.
+*/
+
+/**********************************************/
+
 #menu {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
@@ -34,3 +44,7 @@
 }
 
 /**********************************************/
+
+#starters {
+	display: grid;
+}
