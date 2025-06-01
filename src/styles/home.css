@@ -86,7 +86,7 @@ body {
 	background-color: yellow;
 	color: black;
 	font-size: 1.5rem;
-	width: 20%;
+	width: 25%;
 }
 
 /*********************************************************/
@@ -113,4 +113,18 @@ body {
 	margin-top: var(--card-margin-top);
 	margin-bottom: 2em;
 	padding: 1em;
+	color: black;
+}
+
+/*********************************************************/
+
+#location > p {
+	font-size: 1.5rem;
+}
+
+/*********************************************************/
+
+#location > h2 {
+	text-align: center;
+	font-size: 2rem;
 }
