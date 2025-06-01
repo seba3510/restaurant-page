@@ -12,7 +12,6 @@ import "../styles/home.css";
 
 class HomePage {
 
-
 	#content;
 
 	#home;
@@ -35,16 +34,15 @@ class HomePage {
 				"home"
 			);
 
-		this.#content.appendChild
-			(this.#home);
-
 	} // constructor()
 
 	//=====================================================================================================================================
 
 	display() {
 
-		this.#home.innerHTML = "";
+		this.#content.innerHTML = "";
+
+		// this.#home.innerHTML = "";
 
 		this.#displayHeader();
 
@@ -53,6 +51,9 @@ class HomePage {
 		this.#displayBusinessHours();
 
 		this.#displayLocation();
+
+		this.#content.appendChild
+			(this.#home);
 
 	} // display()
 
@@ -143,6 +144,9 @@ class HomePage {
 				"description"
 			);
 
+		this.#home.appendChild
+			(container);
+
 		const h2 =
 			document.createElement
 				("h2");
@@ -169,9 +173,6 @@ class HomePage {
 
 		container.appendChild
 			(para);
-
-		this.#home.appendChild
-			(container);
 
 	} // displayDescription()
 
@@ -218,9 +219,6 @@ class HomePage {
 				container
 			);
 
-		this.#home.appendChild
-			(container);
-
 	} // displayBusinessHours()
 
 	//=====================================================================================================================================
@@ -228,7 +226,8 @@ class HomePage {
 	#createUnorderedList(hours, container) {
 
 		const ul =
-			document.createElement("ul");
+			document.createElement
+				("ul");
 
 		const n = 7;
 
@@ -273,7 +272,8 @@ class HomePage {
 		h2.textContent =
 			"Location";
 
-		container.appendChild(h2);
+		container.appendChild
+			(h2);
 
 		const para =
 			document.createElement
@@ -291,7 +291,6 @@ class HomePage {
 	} // displayLocation()
 
 	//=====================================================================================================================================
-
 
 } // class
 
