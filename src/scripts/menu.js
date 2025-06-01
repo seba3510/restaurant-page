@@ -40,22 +40,23 @@ class Menu {
 
 	display() {
 
-		this.#content.innerHTML = "";
 
-		this.#menu.innerHTML = "";
+		this.#content.innerHTML = "";
 
 		this.#content.appendChild
 			(this.#menu);
 
+		this.#menu.innerHTML = "";
+
 		this.#displayHeader();
 
-		this.#displayStarters();
+		// this.#displayStarters();
 
-		this.#displayEntrees();
+		// this.#displayEntrees();
 
-		this.#displayLunches();
+		// this.#displayLunches();
 
-		this.#displayPizzas();
+		// this.#displayPizzas();
 
 	} // display()
 
@@ -165,12 +166,28 @@ class Menu {
 				"Starter #3"
 			];
 
+		const description1 =
+			"orem ipsum dolor sit amet, consectetur adipiscing elit. " +
+			"Nunc justo orci, ullamcorper nec bibendum quis, bibendum at risus. " +
+			"In finibus, libero a elementum ullamcorper, elit magna scelerisque dui, " +
+			"quis molestie odio tortor quis arcu. Cras sit amet ex ante.";
+
+		const description2 =
+			"Cras sit amet ex ante. Aenean dignissim mauris ex. Quisque at odio diam. " +
+			"Morbi gravida magna lorem, ac tempor felis fringilla et. " +
+			"Mauris consectetur urna sed elit dictum bibendum. " +
+			"In mattis nulla a facilisis semper.Mauris semper sed enim in condimentum.";
+
+		const description3 =
+			"Fusce euismod enim quis nunc consectetur consectetur in non diam. " +
+			"Cras et libero viverra, feugiat erat ac, viverra magna. " +
+			"Mauris ultricies dolor in tellus sodales scelerisque a at odio.";
+
 		const descriptions =
 			[
-				"Ut blandit massa at arcu rhoncus, quis porttitor mauris viverra.",
-				"Curabitur magna mauris, pulvinar eget arcu vitae, ullamcorper euismod sem. ",
-				"Pellentesque in est metus. " +
-				"Curabitur luctus ut purus et vehicula. Phasellus ut laoreet ligula."
+				description1,
+				description2,
+				description3
 			];
 
 		const prices =

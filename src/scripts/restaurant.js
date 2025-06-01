@@ -10,6 +10,10 @@ import { homePage } from "./home-page.js";
 
 //===============================================================================
 
+import { menu } from "./menu.js";
+
+//===============================================================================
+
 class Restaurant {
 
 	#homeBtn;
@@ -72,6 +76,21 @@ class Restaurant {
 
 	//===============================================================================
 
+	displayMenu() {
+
+		this.#menuBtn.addEventListener("click", (event) => {
+
+			event.preventDefault();
+
+			menu.display();
+
+		}); // addEventListener
+
+	} // displayMenu()
+
+	//===============================================================================
+
+
 } // class
 
 //===============================================================================
@@ -82,6 +101,6 @@ const restaurant =
 
 restaurant.displayHomePage();
 
-// restaurant.displayMenu();
+restaurant.displayMenu();
 
 // restaurant.displayContacts();
