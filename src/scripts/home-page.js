@@ -68,6 +68,7 @@ class HomePage {
 		this.#home.appendChild
 			(header);
 
+
 		const img1 =
 			document.createElement
 				("img");

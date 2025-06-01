@@ -167,7 +167,7 @@ class Menu {
 			];
 
 		const description1 =
-			"orem ipsum dolor sit amet, consectetur adipiscing elit. " +
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
 			"Nunc justo orci, ullamcorper nec bibendum quis, bibendum at risus. " +
 			"In finibus, libero a elementum ullamcorper, elit magna scelerisque dui, " +
 			"quis molestie odio tortor quis arcu. Cras sit amet ex ante.";
