@@ -42,7 +42,7 @@ class HomePage {
 
 		this.#content.innerHTML = "";
 
-		// this.#home.innerHTML = "";
+		this.#home.innerHTML = "";
 
 		this.#displayHeader();
 
