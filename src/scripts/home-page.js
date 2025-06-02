@@ -25,26 +25,13 @@ class HomePage {
 			document.querySelector
 				("#content");
 
-		this.#home =
-			document.createElement
-				("section");
-
-		this.#home.setAttribute
-			(
-				"id",
-				"home"
-			);
-
-		this.#content.appendChild
-			(this.#home);
-
 	} // constructor()
 
 	//=====================================================================================================================================
 
 	display() {
 
-		this.#home.innerHTML = "";
+		this.#content.innerHTML = "";
 
 		this.#displayHeader();
 
@@ -64,7 +51,7 @@ class HomePage {
 			document.createElement
 				("header");
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(header);
 
 		const img1 =
@@ -170,7 +157,7 @@ class HomePage {
 		container.appendChild
 			(para);
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(container);
 
 	} // displayDescription()
@@ -189,7 +176,7 @@ class HomePage {
 				"hours"
 			);
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(container);
 
 		const hours =
@@ -218,7 +205,7 @@ class HomePage {
 				container
 			);
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(container);
 
 	} // displayBusinessHours()
@@ -263,7 +250,7 @@ class HomePage {
 				"location"
 			);
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(container);
 
 		const h2 =
