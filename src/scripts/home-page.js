@@ -14,7 +14,6 @@ class HomePage {
 
 	#content;
 
-	#home;
 
 	//=====================================================================================================================================
 
@@ -30,7 +29,7 @@ class HomePage {
 
 	display() {
 
-		this.#content.innerHTML = "";
+		// this.#content.innerHTML = "";
 
 		this.#content.innerHTML = "";
 
@@ -41,9 +40,6 @@ class HomePage {
 		this.#displayBusinessHours();
 
 		this.#displayLocation();
-
-		this.#content.appendChild
-			(this.#home);
 
 	} // display()
 
@@ -135,7 +131,7 @@ class HomePage {
 				"description"
 			);
 
-		this.#home.appendChild
+		this.#content.appendChild
 			(container);
 
 		const h2 =
@@ -164,9 +160,6 @@ class HomePage {
 
 		container.appendChild
 			(para);
-
-		this.#content.appendChild
-			(container);
 
 	} // displayDescription()
 
@@ -213,8 +206,8 @@ class HomePage {
 				container
 			);
 
-		this.#content.appendChild
-			(container);
+		// this.#content.appendChild
+		// 	(container);
 
 	} // displayBusinessHours()
 

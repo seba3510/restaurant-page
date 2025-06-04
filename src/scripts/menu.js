@@ -12,7 +12,7 @@ import image2 from "../assets/images/right-bee.png";
 
 class Menu {
 
-	#content;
+	#header;
 
 	#menu;
 
@@ -20,19 +20,13 @@ class Menu {
 
 	constructor() {
 
-		this.#content =
+		this.#header =
 			document.querySelector
-				("#content");
+				("#menu-header");
 
 		this.#menu =
-			document.createElement
-				("section");
-
-		this.#menu.setAttribute
-			(
-				"id",
-				"menu"
-			);
+			document.querySelector
+				("#content");
 
 	} // constructor()
 
@@ -41,22 +35,17 @@ class Menu {
 	display() {
 
 
-		this.#content.innerHTML = "";
-
-		this.#content.appendChild
-			(this.#menu);
-
 		this.#menu.innerHTML = "";
 
 		this.#displayHeader();
 
-		// this.#displayStarters();
+		this.#displayStarters();
 
-		// this.#displayEntrees();
+		this.#displayEntrees();
 
-		// this.#displayLunches();
+		this.#displayLunches();
 
-		// this.#displayPizzas();
+		this.#displayPizzas();
 
 	} // display()
 
@@ -64,12 +53,7 @@ class Menu {
 
 	#displayHeader() {
 
-		const header =
-			document.createElement
-				("header");
-
-		this.#menu.appendChild
-			(header);
+		this.#header.innerHTML = "";
 
 		const img1 =
 			document.createElement
@@ -93,7 +77,7 @@ class Menu {
 				"left-bee"
 			);
 
-		header.appendChild
+		this.#header.appendChild
 			(img1);
 
 		const h1 =
@@ -103,7 +87,7 @@ class Menu {
 		h1.textContent =
 			"Menu";
 
-		header.appendChild(h1);
+		this.#header.appendChild(h1);
 
 		const img2 =
 			document.createElement
@@ -127,7 +111,7 @@ class Menu {
 				"right-bee"
 			);
 
-		header.appendChild
+		this.#header.appendChild
 			(img2);
 
 	} // displayHeader()
@@ -161,27 +145,22 @@ class Menu {
 
 		const names =
 			[
-				"Starter #1",
-				"Starter #2",
-				"Starter #3"
+				"Goat Cheese Spread",
+				"Antipasti",
+				"Soup/Salad Combo"
 			];
 
 		const description1 =
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-			"Nunc justo orci, ullamcorper nec bibendum quis, bibendum at risus. " +
-			"In finibus, libero a elementum ullamcorper, elit magna scelerisque dui, " +
-			"quis molestie odio tortor quis arcu. Cras sit amet ex ante.";
+			"Locally sourced goat cheese with farm fresh " +
+			"baked whole grain."
 
 		const description2 =
-			"Cras sit amet ex ante. Aenean dignissim mauris ex. Quisque at odio diam. " +
-			"Morbi gravida magna lorem, ac tempor felis fringilla et. " +
-			"Mauris consectetur urna sed elit dictum bibendum. " +
-			"In mattis nulla a facilisis semper.Mauris semper sed enim in condimentum.";
+			"Artisanal cheese, prosciutto, " +
+			"and roasted olives."
 
 		const description3 =
-			"Fusce euismod enim quis nunc consectetur consectetur in non diam. " +
-			"Cras et libero viverra, feugiat erat ac, viverra magna. " +
-			"Mauris ultricies dolor in tellus sodales scelerisque a at odio.";
+			"A smaller version of the salad of your " +
+			"choice, served with a small Soup of the Week."
 
 		const descriptions =
 			[
@@ -296,10 +275,24 @@ class Menu {
 
 		const names =
 			[
-				"Entree #1",
-				"Entree #2",
-				"Entree #3"
+				"Pan Roasted Flounder",
+				"Pan Seared Yellowfin",
+				"Alpine Kreuter Butter"
 			];
+
+		const description1 =
+			"Smoked bacon, grape tomatoes, local sweet potato, " +
+			"sweet corn pudding, roasted chili butter flounder.";
+
+		const description2 =
+			"Crispy pork belly of Tuna, with golden beets, " +
+			"celery root mash, local pickled perpper gastrique, " +
+			"oregano, hose smoked sea salt.";
+
+		const description3 =
+			"Pan-fried in Herbs and Special Spices. " +
+			"Mashed Potato, Vienna Salad, German Bread, " +
+			"and Herb Butter.";
 
 		const prices =
 			[
@@ -310,15 +303,9 @@ class Menu {
 
 		const descriptions =
 			[
-				"Donec efficitur, nibh egestas varius venenatis, ex " +
-				"sem vulputate enim, elementum condimentum libero " +
-				"turpis id leo",
-				"In feugiat, massa sit amet tincidunt congue, dui " +
-				"neque consectetur velit, id consectetur magna odio " +
-				"nec nisi.Aenean maximus convallis ultricies.",
-				"Donec efficitur, nibh egestas varius venenatis, ex " +
-				"sem vulputate enim, elementum condimentum libero " +
-				"turpis id leo."
+				description1,
+				description2,
+				description3,
 			];
 
 		const entrees =
@@ -403,7 +390,7 @@ class Menu {
 		container.setAttribute
 			(
 				"id",
-				"lunch-specials"
+				"lunch"
 			);
 
 		this.#menu.appendChild
@@ -421,10 +408,10 @@ class Menu {
 
 		const names =
 			[
-				"Lunch #1",
-				"Lunch #2",
-				"Lunch #3",
-				"Lunch #4"
+				"Mexican Bean",
+				"Buffalo Bill Burger",
+				"Arugula & Pear",
+				"Grilled Chicken Panini"
 			];
 
 		const prices =
@@ -435,18 +422,29 @@ class Menu {
 				"$11.25"
 			];
 
+		const description1 =
+			"Black bean puree and pepper jack cheese topped with " +
+			"our homemade salsa, and sprinkled with fried garlic.";
+
+		const description2 =
+			"Classic American burger with your choice of American cheese, " +
+			"lettuce, tomato, red onion, mustard, ketchup, pickles, or " +
+			"mayo!";
+
+		const description3 =
+			"Gorgonzola cheese, sherry vinaigrette."
+
+		const description4 =
+			"Fresh mozzarella, roasted red peppers, " +
+			"sliced tomatoes, mixed field greens, and " +
+			"balsamic vinaigrette.";
+
 		const descriptions =
 			[
-				"unc a est at sem maximus bibendum agestas at quam",
-				"Donec efficitur, nibh egestas varius venenatis, ex " +
-				"sem vulputate enim, elementum condimentum libero " +
-				"turpis id leo.",
-				"ras dapibus risus sed euismod lacinia. Suspendisse " +
-				"condimentum cursus blandit. Curabitur sit amet odio " +
-				"at risus malesuada sollicitudin id sed mauris.",
-				"ras dapibus risus sed euismod lacinia. Suspendisse " +
-				"condimentum cursus blandit. Curabitur sit amet odio " +
-				"at risus malesuada sollicitudin id sed mauris."
+				description1,
+				description2,
+				description3,
+				description4
 			];
 
 		const lunches =
@@ -537,7 +535,7 @@ class Menu {
 		container.setAttribute
 			(
 				"id",
-				"pizza"
+				"pizzas"
 			);
 
 		this.#menu.appendChild
@@ -553,11 +551,11 @@ class Menu {
 		container.appendChild
 			(h1);
 
-		const names =
+		const descriptions =
 			[
-				"Pizza #1",
-				"Pizza #2",
-				"Pizza #3"
+				"Classic Pepperoni Pizza.",
+				"Classic Cheese Pizza.",
+				"Classic New York Pizza"
 			];
 
 		const prices =
@@ -567,16 +565,11 @@ class Menu {
 				"$30.25"
 			];
 
-		const descriptions =
+		const names =
 			[
-				"Donec efficitur, nibh egestas varius venenatis, ex " +
-				"sem vulputate enim, elementum condimentum libero " +
-				"turpis id leo.",
-				"ellentesque in est metus. Curabitur luctus ut purus " +
-				"et vehicula. Phasellus ut laoreet ligula.",
-				"ras dapibus risus sed euismod lacinia. Suspendisse " +
-				"condimentum cursus blandit. Curabitur sit amet odio " +
-				"at risus malesuada sollicitudin id sed mauris."
+				"Pepperoni Pizza",
+				"Cheese Pizza",
+				"New York Pizza"
 			];
 
 		const pizzas =
@@ -632,25 +625,37 @@ class Menu {
 			pizza.appendChild
 				(h2);
 
-			const span =
-				document.createElement
-					("span");
-
-			span.textContent =
-				pizzas[i].price;
-
-			pizza.appendChild
-				(span);
-
-			const para =
+			const para1 =
 				document.createElement
 					("p");
 
-			para.textContent =
+			para1.setAttribute
+				(
+					"class",
+					"description"
+				);
+
+			para1.textContent =
+				pizzas[i].price;
+
+			pizza.appendChild
+				(para1);
+
+			const para2 =
+				document.createElement
+					("p");
+
+			para2.setAttribute
+				(
+					"class",
+					"description"
+				);
+
+			para2.textContent =
 				descriptions[i];
 
 			pizza.appendChild
-				(para);
+				(para2);
 
 		} // for
 

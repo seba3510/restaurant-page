@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Restaurant Page</title>
+		<link rel="icon" href="343efc60b8b70dd39875.png" />
 		<link rel="stylesheet" href="9913fb19eca917d2140d.css" />
 		<link rel="stylesheet" href="158d81187b0ed9202a91.css" />
-		<link rel="stylesheet" href="14926622e91f7da18bf2.css" />
+		<link rel="stylesheet" href="73bd70658d5992105671.css" />
 		<script defer src="main.js"></script>
 	</head>
 
@@ -17,45 +18,169 @@
 			<button id="contact-btn">Contact</button>
 		</nav>
 
-		<main id="content">
-			<header>
+		<div class="wrapper">
+			<header id="menu-header">
 				<img
 					src="a4b1a9a718b813ff367f.png"
 					alt="This is a bee."
 					id="left-bee"
 				/>
-				<h1>Beary's Breakfast Bar</h1>
+				<h1>Menu</h1>
 				<img
 					src="c211eb647b52d1a43e7c.png"
 					alt="This is another bee."
 					id="right-bee"
 				/>
 			</header>
-			<section id="description">
-				<h2>About Us</h2>
-				<p>
-					Beary's has the best porridge! The atmosphere and customer
-					service make you feel like you are sitting in the middle of
-					the woods, eating like a bear! This is exactly the kind of
-					place that you would like to return again and again.
-				</p>
-			</section>
-			<section id="hours">
-				<h2>Business Hours</h2>
-				<ul>
-					<li>Sunday: 8am - 8pm</li>
-					<li>Monday: 6am - 6pm</li>
-					<li>Tuesday: 6am - 6pm</li>
-					<li>Wednesday: 6am - 6pm</li>
-					<li>Thursday: 6am - 10pm</li>
-					<li>Friday: 6am - 10pm</li>
-					<li>Saturday: 8am - 6pm</li>
-				</ul>
-			</section>
-			<section id="location">
-				<h2>Location</h2>
-				<p>123 Forest Drive, Forestville, Main</p>
-			</section>
-		</main>
+			<main id="content">
+				<section id="starters">
+					<h2>Starters</h2>
+					<section id="starter-1">
+						<header>
+							<h2>Goat Cheese Spread</h2>
+						</header>
+						<p class="price">$6.95</p>
+						<p class="description">
+							Locally sourced goat cheese with farm fresh baked
+							whole grain bread.
+						</p>
+					</section>
+					<section id="starter-2">
+						<header>
+							<h2>Antipasti</h2>
+						</header>
+						<p class="price">$13.00</p>
+						<p class="description">
+							Artisanal cheese, prosciutto & roasted olives
+						</p>
+					</section>
+					<section id="starter-3">
+						<header>
+							<h2>Soup/Salad Combo</h2>
+						</header>
+						<p class="price">$7.25</p>
+						<p class="description">
+							A smaller version of the salad of your choice,
+							served with a small Soup of the Week.
+						</p>
+					</section>
+				</section>
+				<section id="lunch">
+					<h2>Lunch Specials</h2>
+					<section id="lunch-1">
+						<header>
+							<h3>Mexican Bean</h3>
+						</header>
+						<p class="price">$6.85</p>
+						<p class="description">
+							Black bean puree and pepper jack cheese topped with
+							our homemade salsa, and sprinkled with fried garlic.
+						</p>
+						<p class="info">
+							Make it vegan by substituting soy cheese $0.50
+						</p>
+					</section>
+					<section id="lunch-2">
+						<header>
+							<h3>Buffalo Bill Burger</h3>
+							<p class="price">$6.95</p>
+							<img
+								src="b64d693c21cffd8cb13f.png"
+								alt="Our newest lunch special."
+								id="new-lunch-img"
+							/>
+						</header>
+						<p class="description">
+							Classic American burger with your choice of American
+							cheese, lettuce, tomato, red onion, mustard,
+							ketchup, pickles, or mayo!
+						</p>
+					</section>
+					<section id="lunch-3">
+						<header>
+							<h3>Arugula & Pear</h3>
+						</header>
+						<p class="price">$8.00</p>
+						<p class="description">
+							Gorgonzola cheese, sherry vinaigrette.
+						</p>
+					</section>
+					<section id="lunch-4">
+						<header>
+							<h3>Grilled Chicken Panini</h3>
+						</header>
+						<p class="price">$11.25</p>
+						<p class="description">
+							Fresh mozzarella, roasted red peppers, sliced
+							tomatoes, mixed field greens, and balsamic
+							vinaigrette.
+						</p>
+					</section>
+				</section>
+				<section id="entrees">
+					<h2>Entrees</h2>
+					<section id="entree-1">
+						<header>
+							<h3>Pan Roasted Flounder</h3>
+						</header>
+						<p class="price">$25.00</p>
+						<p class="description">
+							Smoked bacon, grape tomatoes, local sweet potato,
+							sweet corn pudding, roasted chili butter flounder.
+						</p>
+					</section>
+					<section id="entree-2">
+						<header>
+							<h3>Pan Seared Yellowfin</h3>
+							<h3>Tuna Loin</h3>
+						</header>
+						<p class="price">$29.00</p>
+						<p class="description">
+							Crispy pork belly of Tuna, with golden beets, celery
+							root mash, local pickled perpper gastrique, oregano,
+							hose smoked sea salt.
+						</p>
+					</section>
+					<section id="entree-3">
+						<header>
+							<h3>Alpine Kreuter Butter</h3>
+						</header>
+						<p class="price">$23.95</p>
+						<p class="description">
+							Pan-fried in Herbs and Special Spices. Mashed
+							Potato, Vienna Salad, German Bread, and Herb Butter.
+						</p>
+					</section>
+				</section>
+
+				<section id="pizzas">
+					<h2>Pizza</h2>
+
+					<section id="pizza-1">
+						<h3>Pepperoni Pizza</h3>
+
+						<p class="price">$12.95</p>
+
+						<p class="description">Classic pepperoni pizza.</p>
+					</section>
+
+					<section id="pizza-2">
+						<h3>Cheese Pizza</h3>
+
+						<p class="description">Classic cheese pizza.</p>
+
+						<p class="price">$16.50</p>
+					</section>
+
+					<section id="pizza-3">
+						<h3>New York Pizza</h3>
+
+						<p class="price">$20.00</p>
+
+						<p class="description">Classic New York Pizza.</p>
+					</section>
+				</section>
+			</main>
+		</div>
 	</body>
 </html>

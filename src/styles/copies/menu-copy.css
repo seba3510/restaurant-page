@@ -2,6 +2,8 @@ body {
 	background-image: url("../assets/images/honeycomb.png");
 }
 
+/**********************************************************************/
+
 #menu-header {
 	display: flex;
 	flex-direction: row;
@@ -12,11 +14,15 @@ body {
 	margin-top: 1em;
 }
 
+/**********************************************************************/
+
 #left-bee,
 #right-bee {
 	width: 10%;
 	/* height: auto; */
 }
+
+/**********************************************************************/
 
 #content {
 	display: grid;
@@ -30,12 +36,16 @@ body {
 	margin-top: 1em;
 }
 
+/**********************************************************************/
+
 #starters {
 	display: flex;
 	flex-direction: column;
 	/* justify-content: space-around; */
 	gap: 5px;
 }
+
+/**********************************************************************/
 
 #starter-1,
 #starter-2,
@@ -45,12 +55,16 @@ body {
 	/* grid-template-rows: auto auto; */
 }
 
+/**********************************************************************/
+
 #lunch {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	gap: 5px;
 }
+
+/**********************************************************************/
 
 #lunch-1,
 #lunch-3,
@@ -60,10 +74,14 @@ body {
 	grid-template-rows: 0.2fr 1fr 0.5fr;
 }
 
+/**********************************************************************/
+
 #lunch-1 > .info {
 	font-style: italic;
 	grid-row: 3;
 }
+
+/**********************************************************************/
 
 #lunch-2 > header {
 	display: flex;
@@ -72,41 +90,38 @@ body {
 	gap: 50px;
 }
 
+/**********************************************************************/
+
 #new-lunch-img {
 	width: 5%;
 }
+
+/**********************************************************************/
 
 #lunch-2 {
 	border: 2px dotted black;
 }
 
-#entrees {
-	display: flex;
-	flex-direction: column;
-	grid-area: entrees;
-}
+/**********************************************************************/
 
-#entree-1,
-#entree-2,
-#entree-3 {
+#pizzas {
 	display: grid;
-	grid-template-columns: 0.5fr 0.1fr;
-	gap: 10px;
+	grid-template-columns: 1fr;
+	/* grid-template-rows: 0.2fr 0.2fr 0.2fr; */
 }
 
-#pizza {
+/**********************************************************************/
+
+#pizza-1 {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	/* gap: 50px; */
 }
 
-#pizza-1,
-#pizza-2,
-#pizza-3 {
+/**********************************************************************/
+
+#pizza-2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-}
-
-#pizza-2 > .price {
-	grid-row: 1;
-	grid-column: 2;
+	/* grid-template-rows: 0.2fr 0.2fr 1fr; */
 }
