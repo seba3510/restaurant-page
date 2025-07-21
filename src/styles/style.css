@@ -65,7 +65,7 @@ button[type="button"] {
 
 #menu {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas:
 		"header header"
 		"starters lunch"
@@ -85,6 +85,13 @@ button[type="button"] {
 }
 
 #starters {
-	display: grid;
-	grid-template-columns: 0.3fr auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.starter>header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }

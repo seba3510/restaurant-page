@@ -8,6 +8,8 @@ class Menu {
 
 	#content;
 
+	#menu;
+
 	//==================================================================================
 
 	constructor() {
@@ -17,13 +19,48 @@ class Menu {
 				"#content"
 			);
 
+		this.#content.textContent = "";
+
+		this.#menu =
+			document.createElement(
+				"section"
+			);
+
+		this.#menu.setAttribute(
+			"id",
+			"menu"
+		);
+
+		this.#content.appendChild(
+			this.#menu
+		);
+
 	} // constructor()
 
 	//==================================================================================
 
 	display() {
 
-		this.#content.textContent = "";
+		const h1 =
+			document.createElement(
+				"h1"
+			);
+
+		h1.textContent =
+			"Menu";
+
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.appendChild(
+			h1
+		);
+
+		this.#menu.appendChild(
+			header
+		);
 
 		this.#displayStarters();
 
@@ -33,24 +70,19 @@ class Menu {
 
 	#displayStarters() {
 
-		const menu =
+		const section =
 			document.createElement(
 				"section"
 			);
 
-		menu.setAttribute(
+		section.setAttribute(
 			"id",
-			"menu"
+			"starters"
 		);
 
-		this.#content.appendChild(
-			menu
+		this.#menu.appendChild(
+			section
 		);
-
-		const header =
-			document.createElement(
-				"header"
-			);
 
 		const h2 =
 			document.createElement(
@@ -60,7 +92,7 @@ class Menu {
 		h2.textContent =
 			"Starters";
 
-		header.appendChild(
+		section.appendChild(
 			h2
 		);
 
@@ -89,43 +121,68 @@ class Menu {
 			h2.textContent =
 				starter.title;
 
-			const para1 =
+			const para =
 				document.createElement(
 					"p"
 				);
 
-			para1.textContent =
-				starter.price;
+			para.textContent =
+				this.#formatPrice(
+					starter.price
+				);
 
 			header.append(
 				h2,
-				para1
+				para
 			);
 
-			const para2 =
+			div.appendChild(
+				header
+			);
+
+			const small =
 				document.createElement(
-					"p"
+					"small"
 				);
 
-			para2.textContent =
+			small.textContent =
 				starter.description;
 
 			div.append(
 				header,
-				para2
+				small
 			);
 
-			menu.append(
+			section.appendChild(
 				div
-			)
-
-
+			);
 
 		} // for
 
 	} // displayStarters()
 
 	//==================================================================================
+
+	#formatPrice(price) {
+
+		const formatter =
+			new Intl.NumberFormat(
+				"en-US",
+				{
+					style: "currency",
+					currency: "USD",
+					minimumFractionDigits: 2
+				}
+			);
+
+		const formattedPrice =
+			formatter.format(
+				price
+			);
+
+		return formattedPrice;
+
+	} // formatPrice()
 
 
 } // class
