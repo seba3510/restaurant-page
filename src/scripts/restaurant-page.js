@@ -30,17 +30,17 @@ class RestaurantPage {
 
 		this.#homeBtn =
 			document.querySelector(
-				"button#home"
+				"#home-btn"
 			);
 
 		this.#menuBtn =
 			document.querySelector(
-				"button#menu"
+				"#menu-btn"
 			);
 
 		this.#contactBtn =
 			document.querySelector(
-				"button#contact"
+				"#contact-btn"
 			);
 
 		this.#displayHomePage();
@@ -55,7 +55,7 @@ class RestaurantPage {
 
 		this.#homeBtn.addEventListener("click", () => {
 
-			this.#content.textContent = ""
+			this.#clearContent();
 
 			const homePage =
 				new HomePage();
@@ -68,9 +68,19 @@ class RestaurantPage {
 
 	//====================================================================
 
+	#clearContent() {
+
+		this.#content.textContent = "";
+
+	} // clearContent()
+
+	//====================================================================
+
 	#displayMenu() {
 
 		this.#menuBtn.addEventListener("click", () => {
+
+			this.#clearContent();
 
 			const menu =
 				new Menu();

@@ -1,11 +1,14 @@
+:root {
+	--card-background-color: rgba(36, 36, 36, 0.7);
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: url("../assets/images/background.jpg");
 	background-size: 100vw 100vh;
 }
 
-header {
-	grid-area: header;
+body>header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,7 +25,6 @@ nav>ul {
 	justify-content: center;
 	align-items: center;
 	gap: 40px;
-	border: 2px solid red;
 	padding: 0.5em;
 }
 
@@ -37,33 +39,52 @@ button[type="button"] {
 	color: inherit;
 }
 
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	margin-top: 40px;
-}
+
 
 .card {
+	gap: 10px;
+	margin-top: 40px;
 	border: 3px solid blue;
-	background-color: rgba(36, 36, 36, 0.7);
+	background-color: var(--card-background-color);
 	color: white;
 	padding: 2em;
-	gap: 20px;
 }
-
 
 .card,
 .image-container {
 	display: flex;
-	flex-direction: inherit;
-	justify-content: inherit;
-	align-items: inherit;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .image-container>img {
 	width: 48vw;
 	border-radius: 50%;
+}
+
+#menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"header header"
+		"starters lunch"
+		"entrees pizza"
+		". sides";
+	margin-top: 2em;
+	background-color: var(--card-background-color);
+}
+
+#menu>header {
+	grid-area: header;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: unset;
+}
+
+#starters {
+	display: grid;
+	grid-template-columns: 0.3fr auto;
 }

@@ -21,20 +21,6 @@ class HomePage {
 
 	display() {
 
-		const wrapperContainer =
-			document.createElement(
-				"div"
-			);
-
-		wrapperContainer.setAttribute(
-			"class",
-			"wrapper"
-		)
-
-		this.#content.append(
-			wrapperContainer
-		);
-
 		const section =
 			document.createElement(
 				"section"
@@ -45,7 +31,7 @@ class HomePage {
 			"card"
 		);
 
-		wrapperContainer.append(
+		this.#content.append(
 			section
 		);
 
