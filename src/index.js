@@ -7,12 +7,15 @@ import "./styles/style.css";
 //====================================================================
 
 import {
-	HomePage
-} from "./scripts/home.js";
+	RestaurantPage
+} from "./scripts/restaurant-page.js";
 
 //====================================================================
 
-const homePage =
-	new HomePage();
+//====================================================================
 
-homePage.displayContent();
+window.addEventListener("load", () => {
+
+	new RestaurantPage();
+
+}); // addEventListener()

@@ -19,7 +19,7 @@ class HomePage {
 
 	//====================================================================
 
-	displayContent() {
+	display() {
 
 		const wrapperContainer =
 			document.createElement(
@@ -117,7 +117,7 @@ class HomePage {
 			para3
 		);
 
-	} // displayCard()
+	} // display()
 
 	//====================================================================
 
