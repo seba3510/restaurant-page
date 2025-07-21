@@ -10,6 +10,12 @@ import {
 
 //==================================================================================
 
+import {
+	entrees
+} from "../data/entrees.js";
+
+//==================================================================================
+
 class Menu {
 
 	#content;
@@ -71,6 +77,8 @@ class Menu {
 		this.#displayStarters();
 
 		this.#displayLunch();
+
+		this.#displayEntrees();
 
 	} // display()
 
@@ -287,6 +295,114 @@ class Menu {
 
 
 	} // displayLunch()
+
+	//==================================================================================
+
+	#displayEntrees() {
+
+		const section =
+			document.createElement(
+				"section"
+			);
+
+		section.setAttribute(
+			"id",
+			"entrees"
+		);
+
+		const para =
+			document.createElement(
+				"p"
+			);
+
+		const h2 =
+			document.createElement(
+				"h2"
+			);
+
+		h2.textContent =
+			"Entrees";
+
+		section.appendChild(
+			h2
+		);
+
+		const message =
+			"All entrees served on " +
+			"organic brown rice, or " +
+			"coconut rice";
+
+		para.textContent
+		message;
+
+		section.appendChild(
+			para
+		);
+
+		this.#menu.appendChild(
+			section
+		);
+
+		for (const entree of entrees) {
+
+			const div =
+				document.createElement(
+					"div"
+				);
+
+			div.setAttribute(
+				"class",
+				"entree"
+			);
+
+			const h3 =
+				document.createElement(
+					"h3"
+				);
+
+			h3.textContent =
+				entree.title;
+
+			const para =
+				document.createElement(
+					"p"
+				);
+
+			para.textContent =
+				this.#formatPrice(
+					entree.price
+				);
+
+			const header =
+				document.createElement(
+					"header"
+				);
+
+			header.append(
+				h3,
+				para
+			);
+
+			const small =
+				document.createElement(
+					"small"
+				);
+
+			small.textContent =
+				entree.description;
+
+			div.append(
+				header,
+				small
+			);
+
+			section.appendChild(
+				div
+			);
+
+		} // for
+
+	} // displayEntrees()
 
 
 } // class
