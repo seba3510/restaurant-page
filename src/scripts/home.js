@@ -31,7 +31,7 @@ class HomePage {
 			"wrapper"
 		)
 
-		this.#content.appendChild(
+		this.#content.append(
 			wrapperContainer
 		);
 

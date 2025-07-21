@@ -4,18 +4,29 @@ import {
 
 //====================================================================
 
+import {
+	Menu
+} from "./menu.js";
+
+//====================================================================
+
 class RestaurantPage {
 
+	#content;
 	#homeBtn;
 
 	#menuBtn;
 
 	#contactBtn;
 
-	#homePage;
-
 	//====================================================================
+
 	constructor() {
+
+		this.#content =
+			document.querySelector(
+				"#content"
+			);
 
 		this.#homeBtn =
 			document.querySelector(
@@ -32,15 +43,44 @@ class RestaurantPage {
 				"button#contact"
 			);
 
-		this.#homePage =
-			new HomePage();
+		this.#displayHomePage();
 
-		this.#homePage
-			.display();
+		this.#displayMenu();
 
 	} // constructor()
 
 	//====================================================================
+
+	#displayHomePage() {
+
+		this.#homeBtn.addEventListener("click", () => {
+
+			this.#content.textContent = ""
+
+			const homePage =
+				new HomePage();
+
+			homePage.display();
+
+		}); // addEventListener()
+
+	} // displayHomePage()
+
+	//====================================================================
+
+	#displayMenu() {
+
+		this.#menuBtn.addEventListener("click", () => {
+
+			const menu =
+				new Menu();
+
+			menu.display();
+
+		}); // addEventListener()
+
+
+	} // displayMenu()
 
 
 
