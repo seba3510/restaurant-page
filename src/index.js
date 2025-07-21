@@ -12,3 +12,7 @@ import {
 
 //====================================================================
 
+const homePage =
+	new HomePage();
+
+homePage.displayContent();
