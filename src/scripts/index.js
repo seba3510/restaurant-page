@@ -1,14 +1,18 @@
+import "../styles/resets.css";
+
+//====================================================================
+
 import "../styles/style.css";
 
 //====================================================================
 
 import {
-	greeting
-} from "./greeting.js";
+	HomePage
+} from "./pages/home.js";
 
 //====================================================================
 
-import image from "../assets/images/frog.jpg"
+const homepage =
+	new HomePage();
 
-
-console.log(greeting);
+homepage.greet();
