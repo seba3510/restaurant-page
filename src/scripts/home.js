@@ -14,21 +14,10 @@ class HomePage {
 
 	//====================================================================
 
-	displayHeader() {
+	displayCard() {
 
-		const para =
-			document.createElement(
-				"p"
-			);
 
-		para.textContent =
-			"Hello, World!";
-
-		this.#content.appendChild(
-			para
-		);
-
-	} // greet()
+	} // displayCard()
 
 	//====================================================================
 

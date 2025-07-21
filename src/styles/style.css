@@ -1,7 +1,7 @@
 #content {
 	display: grid;
 	grid-template-columns: 1fr auto;
-	grid-template-areas: "header content";
+	grid-template-areas: "header main";
 }
 
 body {
@@ -11,25 +11,25 @@ body {
 }
 
 header {
+	grid-area: header;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(36, 36, 36, 0.7);
+	background-color: rgba(36, 36, 36, 0.804);
 	width: 100vw;
 	padding-bottom: 1em;
-	grid-area: header;
+	color: white;
 }
 
 nav>ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	gap: 40px;
 	border: 2px solid red;
 	padding: 0.5em;
-	width: 30vw;
-
 }
 
 li {
@@ -40,4 +40,36 @@ button[type="button"] {
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
+	color: inherit;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 40px;
+}
+
+.card {
+	border: 3px solid blue;
+	background-color: rgba(36, 36, 36, 0.7);
+	color: white;
+	padding: 2em;
+	gap: 20px;
+}
+
+
+.card,
+.image-container {
+	display: flex;
+	flex-direction: inherit;
+	justify-content: inherit;
+	align-items: inherit;
+}
+
+.image-container>img {
+	width: 48vw;
+	border-radius: 50%;
 }
