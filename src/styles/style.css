@@ -72,6 +72,7 @@ button[type="button"] {
 		"entrees pizza"
 		". sides";
 	margin-top: 2em;
+	gap: 20px;
 	background-color: var(--card-background-color);
 }
 
@@ -85,13 +86,24 @@ button[type="button"] {
 }
 
 #starters {
-	display: flex;
-	flex-direction: column;
+	grid-area: starters;
 }
 
-.starter>header {
+.starter,
+.lunch {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.starter>header,
+.lunch>header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+}
+
+#lunch {
+	grid-area: lunch;
 }

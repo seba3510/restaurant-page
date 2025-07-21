@@ -4,6 +4,12 @@ import {
 
 //==================================================================================
 
+import {
+	lunchSpecials
+} from "../data/lunch-specials.js";
+
+//==================================================================================
+
 class Menu {
 
 	#content;
@@ -63,6 +69,8 @@ class Menu {
 		);
 
 		this.#displayStarters();
+
+		this.#displayLunch();
 
 	} // display()
 
@@ -184,10 +192,108 @@ class Menu {
 
 	} // formatPrice()
 
+	//==================================================================================
+
+	#displayLunch() {
+
+		const section =
+			document.createElement(
+				"section"
+			);
+
+		section.setAttribute(
+			"id",
+			"lunch"
+		);
+
+		this.#menu.appendChild(
+			section
+		);
+
+		const h2 =
+			document.createElement(
+				"h2"
+			);
+
+		h2.textContent =
+			"Lunch Specials";
+
+		section.appendChild(
+			h2
+		);
+
+		for (const lunch of lunchSpecials) {
+
+			const div =
+				document.createElement(
+					"div"
+				);
+
+			div.setAttribute(
+				"class",
+				"lunch"
+			);
+
+			const header =
+				document.createElement(
+					"header"
+				);
+
+			const h2 =
+				document.createElement(
+					"h2"
+				);
+
+			h2.textContent =
+				lunch.title;
+
+			const para =
+				document.createElement(
+					"p"
+				);
+
+			para.textContent =
+				this.#formatPrice(
+					lunch.price
+				);
+
+			header.append(
+				h2,
+				para
+			);
+
+			div.appendChild(
+				header
+			);
+
+			const small =
+				document.createElement(
+					"small"
+				);
+
+			small.textContent =
+				lunch.description;
+
+			div.append(
+				header,
+				small
+			);
+
+			section.appendChild(
+				div
+			);
+
+		} // for
+
+
+	} // displayLunch()
+
 
 } // class
 
 
 //==================================================================================
+
+
 
 export { Menu };
