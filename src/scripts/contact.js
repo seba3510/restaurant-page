@@ -23,20 +23,6 @@ class Contact {
 				"#content"
 			);
 
-		this.#contact =
-			document.createElement(
-				"section"
-			);
-
-		this.#contact.setAttribute(
-			"id",
-			"contact-info"
-		);
-
-		this.#content.appendChild(
-			this.#contact
-		);
-
 	} // constructor()
 
 
@@ -44,11 +30,54 @@ class Contact {
 
 	display() {
 
+
+		this.#displayPhoneNumber();
+
+		const image =
+			document.createElement(
+				"img"
+			);
+
+		image.setAttribute(
+			"src",
+			mapImage
+		);
+
+		image.setAttribute(
+			"alt",
+			"Location"
+		);
+
+		// const imageContainer =
+		// 	document.createElement(
+		// 		"div"
+		// 	);
+
+		// imageContainer.setAttribute(
+		// 	"class",
+		// 	"image-container"
+		// );
+
+		// imageContainer.appendChild(
+		// 	image
+		// );
+
+		const para =
+			document.createElement(
+				"p"
+			);
+
 		const address =
 			"Apt. 889 6026 Koepp Street, " +
 			"West Laelstad, HI 60261";
 
-		this.#displayPhoneNumber();
+		para.textContent =
+			`🏠 ${address}`;
+
+		this.#content.append(
+			para,
+			image
+		);
 
 	} // display()
 
@@ -61,30 +90,6 @@ class Contact {
 				"div"
 			);
 
-		container.setAttribute(
-			"class",
-			"image-container"
-		);
-
-		const icon =
-			document.createElement(
-				"img"
-			);
-
-		icon.setAttribute(
-			"src",
-			phoneIcon
-		);
-
-		icon.setAttribute(
-			"alt",
-			"Cellphone"
-		);
-
-		container.appendChild(
-			icon
-		);
-
 		const para =
 			document.createElement(
 				"p"
@@ -94,25 +99,10 @@ class Contact {
 			"555-555-5555";
 
 		para.textContent =
-			phoneNumber;
+			`📞 ${phoneNumber}`
 
-		const div =
-			document.createElement(
-				"div"
-			);
-
-		div.setAttribute(
-			"class",
-			"wrapper"
-		);
-
-		div.append(
-			container,
+		this.#content.appendChild(
 			para
-		);
-
-		this.#contact.appendChild(
-			div
 		);
 
 	} // displayPhoneNumber()

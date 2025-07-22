@@ -10,10 +10,7 @@ const pizzas =
 		},
 		{
 			title: "Eggplant Pizza",
-			price: 16.50,
-			description: "Thinly sliced, delicately " +
-				"roasted eggplant with Fontinella cheese, herbs, " +
-				"and topped with fresh basil"
+			price: 16.50
 		}
 	];
 
