@@ -71,6 +71,7 @@ button[type="button"] {
 
 .card {
 	gap: 10px;
+	background-color: var(--card-background-color);
 	color: white;
 	padding: 2em;
 }
@@ -136,7 +137,6 @@ button[type="button"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
 	padding: 1em;
 	gap: 10px;
 }
@@ -177,7 +177,6 @@ button[type="button"] {
 #lunch {
 	grid-area: lunch;
 }
-
 
 #pizzas {
 	grid-area: pizzas;
