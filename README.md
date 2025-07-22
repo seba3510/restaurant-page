@@ -15,7 +15,7 @@ What did you learn while building this project? What challenges did you face and
 ## Acknowledgements
 
 - [The Odin Project's JavaScript Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript)
-- [Webpack Lessson](https://www.theodinproject.com/lessons/javascript-webpack)
+- [Webpack Lesson](https://www.theodinproject.com/lessons/javascript-webpack)
 - [Project Instructions](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
 - [Sticky Footers](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers)
 - [README Editor](https://readme.so/)
