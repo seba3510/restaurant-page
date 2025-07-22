@@ -16,6 +16,12 @@ import {
 
 //==================================================================================
 
+import {
+	pizzas
+} from "../data/pizzas.js";
+
+//==================================================================================
+
 class Menu {
 
 	#content;
@@ -79,6 +85,8 @@ class Menu {
 		this.#displayLunch();
 
 		this.#displayEntrees();
+
+		this.#displayPizzas();
 
 	} // display()
 
@@ -293,7 +301,6 @@ class Menu {
 
 		} // for
 
-
 	} // displayLunch()
 
 	//==================================================================================
@@ -404,6 +411,96 @@ class Menu {
 
 	} // displayEntrees()
 
+	//==================================================================================
+
+	#displayPizzas() {
+
+		const section =
+			document.createElement(
+				"section"
+			);
+
+		section.setAttribute(
+			"id",
+			"pizzas"
+		);
+
+		const h2 =
+			document.createElement(
+				"h2"
+			);
+
+		h2.textContent =
+			"Pizzas";
+
+		section.appendChild(
+			h2
+		);
+
+		this.#menu.appendChild(
+			section
+		);
+
+		for (const pizza of pizzas) {
+
+			const div =
+				document.createElement(
+					"div"
+				);
+
+			div.setAttribute(
+				"class",
+				"pizza"
+			);
+
+			const h3 =
+				document.createElement(
+					"h3"
+				);
+
+			h3.textContent =
+				pizza.title;
+
+			const para =
+				document.createElement(
+					"p"
+				);
+
+			para.textContent =
+				this.#formatPrice(
+					pizza.price
+				);
+
+			const header =
+				document.createElement(
+					"header"
+				);
+
+			header.append(
+				h3,
+				para
+			);
+
+			const small =
+				document.createElement(
+					"small"
+				);
+
+			small.textContent =
+				pizza.description;
+
+			div.append(
+				header,
+				small
+			);
+
+			section.appendChild(
+				div
+			);
+
+		} // for
+
+	} // displayPizzas()
 
 } // class
 

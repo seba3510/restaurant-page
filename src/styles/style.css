@@ -14,7 +14,6 @@ body>header {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(36, 36, 36, 0.804);
-	width: 100vw;
 	padding-bottom: 1em;
 	color: white;
 }
@@ -38,8 +37,6 @@ button[type="button"] {
 	border: none;
 	color: inherit;
 }
-
-
 
 .card {
 	gap: 10px;
@@ -69,10 +66,12 @@ button[type="button"] {
 	grid-template-areas:
 		"header header"
 		"starters lunch"
-		"entrees pizza"
+		"entrees pizzas"
 		". sides";
+	justify-content: center;
+	align-items: center;
 	margin-top: 2em;
-	gap: 20px;
+	padding: 1.5em;
 	background-color: var(--card-background-color);
 }
 
@@ -89,15 +88,27 @@ button[type="button"] {
 	grid-area: starters;
 }
 
-.starter,
-.lunch {
+#starters,
+#lunch,
+#entrees,
+#pizzas {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
+}
+
+.starter,
+.lunch,
+.pizza {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .starter>header,
-.lunch>header {
+.lunch>header,
+.entree>header,
+.pizza>header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -106,4 +117,23 @@ button[type="button"] {
 
 #lunch {
 	grid-area: lunch;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* width: 100%; */
+}
+
+#pizzas {
+	grid-area: pizzas;
+}
+
+#starters,
+#lunch,
+#entrees,
+#pizzas {
+	gap: 10px;
 }
