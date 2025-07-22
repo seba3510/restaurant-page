@@ -347,8 +347,8 @@ class Menu {
 			"organic brown rice, or " +
 			"coconut rice";
 
-		para.textContent
-		message;
+		para.textContent =
+			message;
 
 		section.appendChild(
 			para
