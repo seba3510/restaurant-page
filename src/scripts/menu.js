@@ -28,6 +28,11 @@ import {
 
 //==================================================================================
 
+import newIcon
+	from "../assets/images/icons/sign.png";
+
+//==================================================================================
+
 class Menu {
 
 	#content;
@@ -227,7 +232,7 @@ class Menu {
 
 		section.setAttribute(
 			"id",
-			"lunch"
+			"lunch-specials"
 		);
 
 		this.#menu.appendChild(
@@ -281,7 +286,9 @@ class Menu {
 					lunch.price
 				);
 
-			header.append(
+			this.#checkLunch(
+				lunch,
+				header,
 				h2,
 				para
 			);
@@ -310,6 +317,63 @@ class Menu {
 		} // for
 
 	} // displayLunch()
+
+	//==================================================================================
+	#checkLunch(lunch, header, h2, para) {
+
+		const isBuffaloBurger =
+			lunch.title ===
+			"Buffalo Bill Burger";
+
+		if (isBuffaloBurger) {
+
+			const container =
+				document.createElement(
+					"div"
+				);
+
+			container.setAttribute(
+				"class",
+				"image-container"
+			);
+
+			const image =
+				document.createElement(
+					"img"
+				);
+
+			image.setAttribute(
+				"src",
+				newIcon
+			);
+
+			image.setAttribute(
+				"alt",
+				"New Icon"
+			);
+
+			container.appendChild(
+				image
+			);
+
+			header.append(
+				h2,
+				container,
+				para
+			);
+
+		} // if
+
+		else {
+
+			header.append(
+				h2,
+				para
+			);
+
+		} // else
+
+	} // checkLunch()
 
 	//==================================================================================
 

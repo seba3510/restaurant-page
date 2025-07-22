@@ -62,12 +62,16 @@ button[type="button"] {
 	border-radius: 50%;
 }
 
+#content {
+	color: white;
+}
+
 #menu {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas:
 		"header header"
-		"starters lunch"
+		"starters lunch-specials"
 		"entrees pizzas"
 		". sides";
 	column-gap: 100px;
@@ -85,12 +89,21 @@ button[type="button"] {
 	background-color: unset;
 }
 
+.lunch:nth-child(4n - 1) {
+	border: 3px dotted yellow;
+	padding: 0.2em;
+}
+
+.lunch:nth-child(4n - 1) img {
+	width: 10%;
+}
+
 #starters {
 	grid-area: starters;
 }
 
 #starters,
-#lunch,
+#lunch-specials,
 #entrees,
 #pizzas {
 	display: flex;
@@ -116,6 +129,7 @@ button[type="button"] {
 	justify-content: space-between;
 	align-items: center;
 }
+
 
 #lunch {
 	grid-area: lunch;
