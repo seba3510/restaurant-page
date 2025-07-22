@@ -11,15 +11,18 @@ import {
 } from "./scripts/restaurant-page.js";
 
 //====================================================================
-
 import {
-	Menu
-} from "./scripts/menu.js";
+	HomePage
+} from "./scripts/home.js";
 
 //====================================================================
 
 window.addEventListener("load", () => {
 
+	const homePage =
+		new HomePage();
+
+	homePage.display();
 
 	new RestaurantPage();
 
