@@ -2,21 +2,32 @@
 	--card-background-color: rgba(36, 36, 36, 0.7);
 }
 
+.wrapper:first-child {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	place-items: center;
+	min-height: inherit;
+}
+
 body {
-	display: flex;
-	flex-direction: column;
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: url("../assets/images/background.jpg");
 	background-size: 100vw 100vh;
 }
 
-body>header {
+header:first-child {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(36, 36, 36, 0.804);
 	padding-bottom: 1em;
+	color: white;
+	width: 100%;
+}
+
+#content {
+	flex-grow: 1;
 	color: white;
 }
 
@@ -42,7 +53,6 @@ button[type="button"] {
 
 .card {
 	gap: 10px;
-	margin-top: 40px;
 	border: 3px solid blue;
 	background-color: var(--card-background-color);
 	color: white;
@@ -62,10 +72,6 @@ button[type="button"] {
 	border-radius: 50%;
 }
 
-#content {
-	color: white;
-}
-
 #menu {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -74,10 +80,11 @@ button[type="button"] {
 		"starters lunch-specials"
 		"entrees pizzas"
 		". sides";
-	column-gap: 100px;
+	gap: 50px;
+	background-color: var(--card-background-color);
+	border-radius: 50px;
 	margin-top: 2em;
 	padding: 1.5em;
-	background-color: var(--card-background-color);
 }
 
 #menu>header {
@@ -86,7 +93,6 @@ button[type="button"] {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background-color: unset;
 }
 
 .lunch:nth-child(4n - 1) {
@@ -105,29 +111,42 @@ button[type="button"] {
 #starters,
 #lunch-specials,
 #entrees,
-#pizzas {
+#pizzas,
+#sides {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	border: 3px solid blue;
+	padding: 1em;
 }
 
 .starter,
 .lunch,
-.pizza {
+.pizza,
+.entree,
+.side {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 }
 
 .starter>header,
 .lunch>header,
 .entree>header,
-.pizza>header,
-.side {
+.pizza>header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+.side {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
+}
+
+#menu header {
+	background-color: unset;
 }
 
 
@@ -135,12 +154,6 @@ button[type="button"] {
 	grid-area: lunch;
 }
 
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
 
 #pizzas {
 	grid-area: pizzas;
@@ -150,26 +163,31 @@ button[type="button"] {
 	grid-area: sides;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
 }
 
-#starters,
-#lunch,
-#entrees,
-#pizzas {
-	gap: 10px;
-}
+
 
 footer {
+	justify-self: end;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	gap: 15px;
+	min-height: 50px;
 	background-color: var(--card-background-color);
-	margin-top: auto;
-	gap: 10px;
+	width: 100vw;
+	font-size: inherit;
+	color: white;
 }
 
 .image-container>img {
 	width: 50%;
+}
+
+.wrapper:nth-child(2) {
+	display: flex;
+	flex-direction: row;
+	border: 2px solid red;
+	padding-bottom: 1em;
 }

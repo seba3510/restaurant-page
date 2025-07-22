@@ -129,8 +129,17 @@ class Menu {
 		h2.textContent =
 			"Starters";
 
-		section.appendChild(
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.appendChild(
 			h2
+		)
+
+		section.appendChild(
+			header
 		);
 
 		for (const starter of starters) {
@@ -247,8 +256,18 @@ class Menu {
 		h2.textContent =
 			"Lunch Specials";
 
-		section.appendChild(
+
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.appendChild(
 			h2
+		);
+
+		section.appendChild(
+			header
 		);
 
 		for (const lunch of lunchSpecials) {
@@ -402,8 +421,17 @@ class Menu {
 		h2.textContent =
 			"Entrees";
 
-		section.appendChild(
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.appendChild(
 			h2
+		);
+
+		section.appendChild(
+			header
 		);
 
 		const message =
@@ -413,6 +441,15 @@ class Menu {
 
 		para.textContent =
 			message;
+
+		para.style.fontStyle =
+			"italic";
+
+		para.style.textAlign =
+			"center";
+
+		para.style.paddingBottom =
+			"1em"
 
 		section.appendChild(
 			para
@@ -505,8 +542,17 @@ class Menu {
 		h2.textContent =
 			"Pizzas";
 
-		section.appendChild(
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.appendChild(
 			h2
+		);
+
+		section.appendChild(
+			header
 		);
 
 		this.#menu.appendChild(
@@ -596,8 +642,17 @@ class Menu {
 		h2.textContent =
 			"Healthy Sides";
 
-		section.appendChild(
+		const header =
+			document.createElement(
+				"header"
+			);
+
+		header.append(
 			h2
+		);
+
+		section.appendChild(
+			header
 		);
 
 		this.#menu.appendChild(
