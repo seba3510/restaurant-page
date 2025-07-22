@@ -10,6 +10,12 @@ import {
 
 //====================================================================
 
+import {
+	Contact
+} from "./contact.js";
+
+//====================================================================
+
 class RestaurantPage {
 
 	#content;
@@ -47,6 +53,8 @@ class RestaurantPage {
 		this.#displayHomePage();
 
 		this.#displayMenu();
+
+		this.#displayContact();
 
 	} // constructor()
 
@@ -93,6 +101,21 @@ class RestaurantPage {
 	} // displayMenu()
 
 	//====================================================================
+
+	#displayContact() {
+
+		this.#contactBtn.addEventListener("click", () => {
+
+			this.#clearContent();
+
+			const contact =
+				new Contact();
+
+			contact.display();
+
+		}); // addEventListener()
+
+	} // displayContact()
 
 } // class
 

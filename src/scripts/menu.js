@@ -186,19 +186,6 @@ class Menu {
 				header
 			);
 
-			const small =
-				document.createElement(
-					"small"
-				);
-
-			small.textContent =
-				starter.description;
-
-			div.append(
-				header,
-				small
-			);
-
 			section.appendChild(
 				div
 			);
@@ -316,18 +303,6 @@ class Menu {
 				header
 			);
 
-			const small =
-				document.createElement(
-					"small"
-				);
-
-			small.textContent =
-				lunch.description;
-
-			div.append(
-				header,
-				small
-			);
 
 			section.appendChild(
 				div
@@ -413,6 +388,17 @@ class Menu {
 				"p"
 			);
 
+		const message =
+			"All entrees served on " +
+			"organic brown rice, or " +
+			"coconut rice";
+
+		para.textContent =
+			message;
+
+		para.style.fontStyle =
+			"italic";
+
 		const h2 =
 			document.createElement(
 				"h2"
@@ -426,33 +412,13 @@ class Menu {
 				"header"
 			);
 
-		header.appendChild(
-			h2
+		header.append(
+			h2,
+			para
 		);
 
 		section.appendChild(
 			header
-		);
-
-		const message =
-			"All entrees served on " +
-			"organic brown rice, or " +
-			"coconut rice";
-
-		para.textContent =
-			message;
-
-		para.style.fontStyle =
-			"italic";
-
-		para.style.textAlign =
-			"center";
-
-		para.style.paddingBottom =
-			"1em"
-
-		section.appendChild(
-			para
 		);
 
 		this.#menu.appendChild(
@@ -460,16 +426,6 @@ class Menu {
 		);
 
 		for (const entree of entrees) {
-
-			const div =
-				document.createElement(
-					"div"
-				);
-
-			div.setAttribute(
-				"class",
-				"entree"
-			);
 
 			const h3 =
 				document.createElement(
@@ -489,27 +445,19 @@ class Menu {
 					entree.price
 				);
 
-			const header =
+			const div =
 				document.createElement(
-					"header"
+					"div"
 				);
 
-			header.append(
-				h3,
-				para
-			);
-
-			const small =
-				document.createElement(
-					"small"
-				);
-
-			small.textContent =
-				entree.description;
+			div.setAttribute(
+				"class",
+				"entree"
+			)
 
 			div.append(
-				header,
-				small
+				h3,
+				para
 			);
 
 			section.appendChild(
@@ -589,27 +537,10 @@ class Menu {
 					pizza.price
 				);
 
-			const header =
-				document.createElement(
-					"header"
-				);
-
-			header.append(
-				h3,
-				para
-			);
-
-			const small =
-				document.createElement(
-					"small"
-				);
-
-			small.textContent =
-				pizza.description;
 
 			div.append(
-				header,
-				small
+				h3,
+				para
 			);
 
 			section.appendChild(
