@@ -89,10 +89,9 @@ class RestaurantPage {
 
 		}); // addEventListener()
 
-
 	} // displayMenu()
 
-
+	//====================================================================
 
 } // class
 

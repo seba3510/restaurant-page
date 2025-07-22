@@ -68,8 +68,7 @@ button[type="button"] {
 		"starters lunch"
 		"entrees pizzas"
 		". sides";
-	justify-content: center;
-	align-items: center;
+	column-gap: 100px;
 	margin-top: 2em;
 	padding: 1.5em;
 	background-color: var(--card-background-color);
@@ -108,7 +107,8 @@ button[type="button"] {
 .starter>header,
 .lunch>header,
 .entree>header,
-.pizza>header {
+.pizza>header,
+.side {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -129,6 +129,13 @@ button[type="button"] {
 
 #pizzas {
 	grid-area: pizzas;
+}
+
+#sides {
+	grid-area: sides;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 #starters,

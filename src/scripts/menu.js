@@ -22,6 +22,12 @@ import {
 
 //==================================================================================
 
+import {
+	healthySides
+} from "../data/sides.js";
+
+//==================================================================================
+
 class Menu {
 
 	#content;
@@ -87,6 +93,8 @@ class Menu {
 		this.#displayEntrees();
 
 		this.#displayPizzas();
+
+		this.#displayHealthySides();
 
 	} // display()
 
@@ -502,11 +510,88 @@ class Menu {
 
 	} // displayPizzas()
 
+	//==================================================================================
+
+	#displayHealthySides() {
+
+
+		const section =
+			document.createElement(
+				"section"
+			);
+
+		section.setAttribute(
+			"id",
+			"sides"
+		);
+
+		const h2 =
+			document.createElement(
+				"h2"
+			);
+
+		h2.textContent =
+			"Healthy Sides";
+
+		section.appendChild(
+			h2
+		);
+
+		this.#menu.appendChild(
+			section
+		);
+
+		for (const side of healthySides) {
+
+			const div =
+				document.createElement(
+					"div"
+				);
+
+			div.setAttribute(
+				"class",
+				"side"
+			);
+
+			const h3 =
+				document.createElement(
+					"h3"
+				);
+
+			h3.textContent =
+				side.title;
+
+			const para =
+				document.createElement(
+					"p"
+				);
+
+			para.textContent =
+				this.#formatPrice(
+					side.price
+				);
+
+			const header =
+				document.createElement(
+					"header"
+				);
+
+			div.append(
+				h3,
+				para
+			);
+
+			section.appendChild(
+				div
+			);
+
+		} // for
+
+	} // displayHealthySides()
+
 } // class
 
 
 //==================================================================================
-
-
 
 export { Menu };
