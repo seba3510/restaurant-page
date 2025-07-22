@@ -514,7 +514,6 @@ class Menu {
 
 	#displayHealthySides() {
 
-
 		const section =
 			document.createElement(
 				"section"

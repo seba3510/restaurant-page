@@ -13,6 +13,7 @@ import {
 class RestaurantPage {
 
 	#content;
+
 	#homeBtn;
 
 	#menuBtn;

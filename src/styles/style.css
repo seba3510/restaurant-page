@@ -3,6 +3,8 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: url("../assets/images/background.jpg");
 	background-size: 100vw 100vh;
@@ -143,4 +145,18 @@ button[type="button"] {
 #entrees,
 #pizzas {
 	gap: 10px;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--card-background-color);
+	margin-top: auto;
+	gap: 10px;
+}
+
+.image-container>img {
+	width: 50%;
 }
