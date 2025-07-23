@@ -243,7 +243,6 @@ class Menu {
 		h2.textContent =
 			"Lunch Specials";
 
-
 		const header =
 			document.createElement(
 				"header"

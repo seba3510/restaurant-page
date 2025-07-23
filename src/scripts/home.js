@@ -37,16 +37,6 @@ class HomePage {
 		para1.textContent =
 			textContents[0];
 
-		const div =
-			document.createElement(
-				"div"
-			);
-
-		div.setAttribute(
-			"class",
-			"image-container"
-		);
-
 		const image =
 			document.createElement(
 				"img"
@@ -60,10 +50,11 @@ class HomePage {
 		image.setAttribute(
 			"alt",
 			"Chef"
-		)
+		);
 
-		div.append(
-			image
+		image.setAttribute(
+			"class",
+			"chef"
 		);
 
 		const para2 =
@@ -85,7 +76,7 @@ class HomePage {
 		this.#content.append(
 			para1,
 			para2,
-			div,
+			image,
 			para3
 		);
 

@@ -25,7 +25,6 @@ class Contact {
 
 	} // constructor()
 
-
 	//===================================================================
 
 	display() {
@@ -48,19 +47,10 @@ class Contact {
 			"Location"
 		);
 
-		// const imageContainer =
-		// 	document.createElement(
-		// 		"div"
-		// 	);
-
-		// imageContainer.setAttribute(
-		// 	"class",
-		// 	"image-container"
-		// );
-
-		// imageContainer.appendChild(
-		// 	image
-		// );
+		image.setAttribute(
+			"class",
+			"map"
+		);
 
 		const para =
 			document.createElement(
