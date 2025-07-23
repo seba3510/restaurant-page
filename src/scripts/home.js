@@ -21,20 +21,6 @@ class HomePage {
 
 	display() {
 
-		const section =
-			document.createElement(
-				"section"
-			);
-
-		section.setAttribute(
-			"class",
-			"card"
-		);
-
-		this.#content.append(
-			section
-		);
-
 		const textContents =
 			[
 				"The best restaurant " +
@@ -96,7 +82,7 @@ class HomePage {
 		para3.textContent =
 			textContents[2];
 
-		section.append(
+		this.#content.append(
 			para1,
 			para2,
 			div,

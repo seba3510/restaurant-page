@@ -321,16 +321,6 @@ class Menu {
 
 		if (isBuffaloBurger) {
 
-			const container =
-				document.createElement(
-					"div"
-				);
-
-			container.setAttribute(
-				"class",
-				"image-container"
-			);
-
 			const image =
 				document.createElement(
 					"img"
@@ -346,13 +336,9 @@ class Menu {
 				"New Icon"
 			);
 
-			container.appendChild(
-				image
-			);
-
 			header.append(
 				h2,
-				container,
+				image,
 				para
 			);
 
