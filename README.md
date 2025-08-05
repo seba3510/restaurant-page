@@ -21,5 +21,3 @@ What did you learn while building this project? What challenges did you face and
 - [README Editor](https://readme.so/)
 
 ## Demo
-
-[Live Demo](https://seba3510.github.io/restaurant-page/)
