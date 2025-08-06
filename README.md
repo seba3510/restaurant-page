@@ -19,3 +19,7 @@ What did you learn while building this project? What challenges did you face and
 - [Project Instructions](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
 - [Sticky Footers](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers)
 - [README Editor](https://readme.so/)
+
+# Live Demo
+
+[Live Demo](https://seba3510.github.io/restaurant-page/)
